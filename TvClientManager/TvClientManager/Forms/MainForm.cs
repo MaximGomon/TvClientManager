@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,11 @@ namespace TvClientManager
         private void ResizeAllFormItems()
         {
             scMain.Height = this.Height - statusToolStrip.Height - tsMainMenu.Height;
+        }
+
+        private void tsbCalc_Click(object sender, EventArgs e)
+        {
+            Process.Start("Calc.exe");
         }
     }
 }

@@ -37,8 +37,8 @@
             this.tsbAbout = new System.Windows.Forms.ToolStripButton();
             this.tsbRecycle = new System.Windows.Forms.ToolStripButton();
             this.tsbExit = new System.Windows.Forms.ToolStripButton();
-            this.scMain = new System.Windows.Forms.SplitContainer();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.scMain = new System.Windows.Forms.SplitContainer();
             this.statusToolStrip = new System.Windows.Forms.ToolStrip();
             this.tsbStatus = new System.Windows.Forms.ToolStripButton();
             this.tslStatus = new System.Windows.Forms.ToolStripLabel();
@@ -59,89 +59,96 @@
             this.toolStripButton1});
             this.tsMainMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMainMenu.Name = "tsMainMenu";
-            this.tsMainMenu.Size = new System.Drawing.Size(922, 42);
+            this.tsMainMenu.Size = new System.Drawing.Size(922, 38);
             this.tsMainMenu.TabIndex = 3;
             // 
             // tsbClients
             // 
             this.tsbClients.AutoSize = false;
-            this.tsbClients.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbClients.BackgroundImage")));
             this.tsbClients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tsbClients.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbClients.Image = ((System.Drawing.Image)(resources.GetObject("tsbClients.Image")));
+            this.tsbClients.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbClients.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbClients.Name = "tsbClients";
-            this.tsbClients.Size = new System.Drawing.Size(40, 39);
+            this.tsbClients.Size = new System.Drawing.Size(35, 35);
             this.tsbClients.Text = "toolStripButton1";
             this.tsbClients.ToolTipText = "Список клієнтів";
             // 
             // tsbCalc
             // 
             this.tsbCalc.AutoSize = false;
-            this.tsbCalc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbCalc.BackgroundImage")));
             this.tsbCalc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tsbCalc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCalc.Image = ((System.Drawing.Image)(resources.GetObject("tsbCalc.Image")));
+            this.tsbCalc.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbCalc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbCalc.Name = "tsbCalc";
-            this.tsbCalc.Size = new System.Drawing.Size(40, 39);
+            this.tsbCalc.Size = new System.Drawing.Size(35, 35);
             this.tsbCalc.Text = "toolStripButton2";
             this.tsbCalc.ToolTipText = "Калькулятор";
+            this.tsbCalc.Click += new System.EventHandler(this.tsbCalc_Click);
             // 
             // tsbAbout
             // 
             this.tsbAbout.AutoSize = false;
-            this.tsbAbout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbAbout.BackgroundImage")));
             this.tsbAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tsbAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAbout.Image = ((System.Drawing.Image)(resources.GetObject("tsbAbout.Image")));
+            this.tsbAbout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbAbout.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAbout.Name = "tsbAbout";
-            this.tsbAbout.Size = new System.Drawing.Size(40, 39);
+            this.tsbAbout.Size = new System.Drawing.Size(35, 35);
             this.tsbAbout.Text = "toolStripButton3";
             this.tsbAbout.ToolTipText = "Про програму";
             // 
             // tsbRecycle
             // 
             this.tsbRecycle.AutoSize = false;
-            this.tsbRecycle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbRecycle.BackgroundImage")));
             this.tsbRecycle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tsbRecycle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRecycle.Image = ((System.Drawing.Image)(resources.GetObject("tsbRecycle.Image")));
+            this.tsbRecycle.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbRecycle.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbRecycle.Name = "tsbRecycle";
-            this.tsbRecycle.Size = new System.Drawing.Size(40, 39);
+            this.tsbRecycle.Size = new System.Drawing.Size(35, 35);
             this.tsbRecycle.Text = "toolStripButton4";
             this.tsbRecycle.ToolTipText = "Корзина";
             // 
             // tsbExit
             // 
             this.tsbExit.AutoSize = false;
-            this.tsbExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbExit.BackgroundImage")));
             this.tsbExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tsbExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExit.Image = ((System.Drawing.Image)(resources.GetObject("tsbExit.Image")));
+            this.tsbExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExit.Name = "tsbExit";
-            this.tsbExit.Size = new System.Drawing.Size(40, 39);
-            this.tsbExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.tsbExit.Size = new System.Drawing.Size(35, 35);
+            this.tsbExit.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.tsbExit.ToolTipText = "Вихід";
             this.tsbExit.Click += new System.EventHandler(this.tsbExit_Click);
-            // 
-            // scMain
-            // 
-            this.scMain.Dock = System.Windows.Forms.DockStyle.Top;
-            this.scMain.Location = new System.Drawing.Point(0, 42);
-            this.scMain.Name = "scMain";
-            this.scMain.Size = new System.Drawing.Size(922, 413);
-            this.scMain.SplitterDistance = 177;
-            this.scMain.TabIndex = 4;
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.BackgroundImage")));
             this.toolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(40, 39);
+            this.toolStripButton1.Size = new System.Drawing.Size(35, 35);
             this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // scMain
+            // 
+            this.scMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.scMain.Location = new System.Drawing.Point(0, 38);
+            this.scMain.Name = "scMain";
+            this.scMain.Size = new System.Drawing.Size(922, 413);
+            this.scMain.SplitterDistance = 177;
+            this.scMain.TabIndex = 4;
             // 
             // statusToolStrip
             // 
