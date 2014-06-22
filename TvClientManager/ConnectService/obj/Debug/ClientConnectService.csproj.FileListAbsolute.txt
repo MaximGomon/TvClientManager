@@ -3,3 +3,8 @@ c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\Conn
 c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\bin\ConnectService.pdb
 c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\obj\Debug\ConnectService.dll
 c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\obj\Debug\ConnectService.pdb
+E:\Work\TVClientManager\TvClientManager\ConnectService\bin\ConnectService.dll.config
+E:\Work\TVClientManager\TvClientManager\ConnectService\bin\ConnectService.dll
+E:\Work\TVClientManager\TvClientManager\ConnectService\bin\ConnectService.pdb
+E:\Work\TVClientManager\TvClientManager\ConnectService\obj\Debug\ConnectService.dll
+E:\Work\TVClientManager\TvClientManager\ConnectService\obj\Debug\ConnectService.pdb

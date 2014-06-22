@@ -6,6 +6,5 @@ c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\Serv
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\ServerConnectService.dll.config
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\ServerConnectService.dll
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\ServerConnectService.pdb
-E:\Work\TVClientManager\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.csprojResolveAssemblyReference.cache
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.dll
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.pdb
