@@ -1,0 +1,8 @@
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\bin\Debug\TvManagerServer.exe.config
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\bin\Debug\TvManagerServer.exe
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\bin\Debug\TvManagerServer.pdb
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csprojResolveAssemblyReference.cache
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.Properties.Resources.resources
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csproj.GenerateResource.Cache
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.exe
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.pdb
