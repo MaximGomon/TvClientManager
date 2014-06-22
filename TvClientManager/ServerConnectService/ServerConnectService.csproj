@@ -75,6 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ServiceManager.cs" />
     <Compile Include="TvManagerServerService.svc.cs">
       <DependentUpon>TvManagerServerService.svc</DependentUpon>
     </Compile>

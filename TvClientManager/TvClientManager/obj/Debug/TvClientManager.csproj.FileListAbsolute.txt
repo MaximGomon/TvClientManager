@@ -6,3 +6,6 @@ c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvCl
 c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.csproj.GenerateResource.Cache
 c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.exe
 c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.pdb
+E:\Work\TVClientManager\TvClientManager\TvClientManager\bin\Debug\TvClientManager.exe.config
+E:\Work\TVClientManager\TvClientManager\TvClientManager\obj\Debug\TvClientManager.exe
+E:\Work\TVClientManager\TvClientManager\TvClientManager\obj\Debug\TvClientManager.pdb
