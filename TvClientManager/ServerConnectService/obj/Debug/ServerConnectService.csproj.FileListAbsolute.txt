@@ -1,0 +1,5 @@
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ServerConnectService\bin\ServerConnectService.dll.config
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ServerConnectService\bin\ServerConnectService.dll
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ServerConnectService\bin\ServerConnectService.pdb
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.dll
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.pdb

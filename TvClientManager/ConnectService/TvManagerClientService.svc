@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="ConnectService.TvManagerClientService" CodeBehind="TvManagerClientService.svc.cs" %>

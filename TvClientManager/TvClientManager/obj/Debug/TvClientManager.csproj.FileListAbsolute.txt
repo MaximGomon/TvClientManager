@@ -1,0 +1,8 @@
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\bin\Debug\TvClientManager.exe.config
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\bin\Debug\TvClientManager.exe
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\bin\Debug\TvClientManager.pdb
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.MainForm.resources
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.Properties.Resources.resources
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.csproj.GenerateResource.Cache
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.exe
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\TvClientManager\obj\Debug\TvClientManager.pdb

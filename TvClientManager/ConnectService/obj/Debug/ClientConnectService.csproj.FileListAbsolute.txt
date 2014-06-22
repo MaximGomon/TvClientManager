@@ -1,0 +1,5 @@
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\bin\ConnectService.dll.config
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\bin\ConnectService.dll
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\bin\ConnectService.pdb
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\obj\Debug\ConnectService.dll
+c:\users\максим\documents\visual studio 2013\Projects\TvClientManager\ConnectService\obj\Debug\ConnectService.pdb

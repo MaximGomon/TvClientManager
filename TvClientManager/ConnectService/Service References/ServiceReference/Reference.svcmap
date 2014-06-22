@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2afaba31-997f-4dbe-b68e-b72dea42b2af" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8001/TvManagerServerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TvManagerServerService.xsd" MetadataType="Schema" ID="5329fc82-102e-4560-8ada-bce2be447aa8" SourceId="1" SourceUrl="http://localhost:8001/TvManagerServerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TvManagerServerService.disco" MetadataType="Disco" ID="42188a55-aec7-4a07-8d26-4e3d03fe9da3" SourceId="1" SourceUrl="http://localhost:8001/TvManagerServerService.svc?disco" />
+    <MetadataFile FileName="TvManagerServerService.wsdl" MetadataType="Wsdl" ID="61f1c82a-dc10-4f8f-ad35-130463df394c" SourceId="1" SourceUrl="http://localhost:8001/TvManagerServerService.svc?wsdl" />
+    <MetadataFile FileName="TvManagerServerService1.xsd" MetadataType="Schema" ID="d9dd62a6-55d4-4646-a261-28b2082a5218" SourceId="1" SourceUrl="http://localhost:8001/TvManagerServerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TvManagerServerService2.xsd" MetadataType="Schema" ID="debd033d-5df0-45fd-aef4-fdcb084a67bd" SourceId="1" SourceUrl="http://localhost:8001/TvManagerServerService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
