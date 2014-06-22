@@ -30,57 +30,37 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.btOk = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.formToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tsMainMenu = new System.Windows.Forms.ToolStrip();
             this.tsbClients = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbCalc = new System.Windows.Forms.ToolStripButton();
+            this.tsbAbout = new System.Windows.Forms.ToolStripButton();
+            this.tsbRecycle = new System.Windows.Forms.ToolStripButton();
             this.tsbExit = new System.Windows.Forms.ToolStripButton();
+            this.scMain = new System.Windows.Forms.SplitContainer();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.statusToolStrip = new System.Windows.Forms.ToolStrip();
+            this.tsbStatus = new System.Windows.Forms.ToolStripButton();
+            this.tslStatus = new System.Windows.Forms.ToolStripLabel();
             this.tsMainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
+            this.scMain.SuspendLayout();
+            this.statusToolStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btOk
-            // 
-            this.btOk.Location = new System.Drawing.Point(80, 127);
-            this.btOk.Name = "btOk";
-            this.btOk.Size = new System.Drawing.Size(75, 23);
-            this.btOk.TabIndex = 0;
-            this.btOk.Text = "Ok";
-            this.btOk.UseVisualStyleBackColor = true;
-            this.btOk.Click += new System.EventHandler(this.btOk_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 461);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(922, 22);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // tsMainMenu
             // 
             this.tsMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbClients,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.tsbExit});
+            this.tsbCalc,
+            this.tsbAbout,
+            this.tsbRecycle,
+            this.tsbExit,
+            this.toolStripButton1});
             this.tsMainMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMainMenu.Name = "tsMainMenu";
             this.tsMainMenu.Size = new System.Drawing.Size(922, 42);
             this.tsMainMenu.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.tsMainMenu, "Головне меню");
             // 
             // tsbClients
             // 
@@ -94,41 +74,41 @@
             this.tsbClients.Text = "toolStripButton1";
             this.tsbClients.ToolTipText = "Список клієнтів";
             // 
-            // toolStripButton2
+            // tsbCalc
             // 
-            this.toolStripButton2.AutoSize = false;
-            this.toolStripButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.BackgroundImage")));
-            this.toolStripButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(40, 39);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.ToolTipText = "Калькулятор";
+            this.tsbCalc.AutoSize = false;
+            this.tsbCalc.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbCalc.BackgroundImage")));
+            this.tsbCalc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tsbCalc.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCalc.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCalc.Name = "tsbCalc";
+            this.tsbCalc.Size = new System.Drawing.Size(40, 39);
+            this.tsbCalc.Text = "toolStripButton2";
+            this.tsbCalc.ToolTipText = "Калькулятор";
             // 
-            // toolStripButton3
+            // tsbAbout
             // 
-            this.toolStripButton3.AutoSize = false;
-            this.toolStripButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.BackgroundImage")));
-            this.toolStripButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(40, 39);
-            this.toolStripButton3.Text = "toolStripButton3";
-            this.toolStripButton3.ToolTipText = "Про програму";
+            this.tsbAbout.AutoSize = false;
+            this.tsbAbout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbAbout.BackgroundImage")));
+            this.tsbAbout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tsbAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAbout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAbout.Name = "tsbAbout";
+            this.tsbAbout.Size = new System.Drawing.Size(40, 39);
+            this.tsbAbout.Text = "toolStripButton3";
+            this.tsbAbout.ToolTipText = "Про програму";
             // 
-            // toolStripButton4
+            // tsbRecycle
             // 
-            this.toolStripButton4.AutoSize = false;
-            this.toolStripButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.BackgroundImage")));
-            this.toolStripButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(40, 39);
-            this.toolStripButton4.Text = "toolStripButton4";
-            this.toolStripButton4.ToolTipText = "Корзина";
+            this.tsbRecycle.AutoSize = false;
+            this.tsbRecycle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbRecycle.BackgroundImage")));
+            this.tsbRecycle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tsbRecycle.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbRecycle.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRecycle.Name = "tsbRecycle";
+            this.tsbRecycle.Size = new System.Drawing.Size(40, 39);
+            this.tsbRecycle.Text = "toolStripButton4";
+            this.tsbRecycle.ToolTipText = "Корзина";
             // 
             // tsbExit
             // 
@@ -139,24 +119,76 @@
             this.tsbExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbExit.Name = "tsbExit";
             this.tsbExit.Size = new System.Drawing.Size(40, 39);
-            this.tsbExit.Text = "toolStripButton5";
+            this.tsbExit.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.tsbExit.ToolTipText = "Вихід";
+            this.tsbExit.Click += new System.EventHandler(this.tsbExit_Click);
+            // 
+            // scMain
+            // 
+            this.scMain.Dock = System.Windows.Forms.DockStyle.Top;
+            this.scMain.Location = new System.Drawing.Point(0, 42);
+            this.scMain.Name = "scMain";
+            this.scMain.Size = new System.Drawing.Size(922, 413);
+            this.scMain.SplitterDistance = 177;
+            this.scMain.TabIndex = 4;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.AutoSize = false;
+            this.toolStripButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.BackgroundImage")));
+            this.toolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(40, 39);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // statusToolStrip
+            // 
+            this.statusToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.statusToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbStatus,
+            this.tslStatus});
+            this.statusToolStrip.Location = new System.Drawing.Point(0, 458);
+            this.statusToolStrip.Name = "statusToolStrip";
+            this.statusToolStrip.Size = new System.Drawing.Size(922, 25);
+            this.statusToolStrip.TabIndex = 5;
+            this.statusToolStrip.Text = "toolStrip1";
+            // 
+            // tsbStatus
+            // 
+            this.tsbStatus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tsbStatus.BackgroundImage")));
+            this.tsbStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tsbStatus.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbStatus.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbStatus.Name = "tsbStatus";
+            this.tsbStatus.Size = new System.Drawing.Size(23, 22);
+            this.tsbStatus.ToolTipText = "Переглянути подію";
+            // 
+            // tslStatus
+            // 
+            this.tslStatus.Name = "tslStatus";
+            this.tslStatus.Size = new System.Drawing.Size(0, 22);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 483);
+            this.Controls.Add(this.statusToolStrip);
+            this.Controls.Add(this.scMain);
             this.Controls.Add(this.tsMainMenu);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.btOk);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "ClientManager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.tsMainMenu.ResumeLayout(false);
             this.tsMainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scMain)).EndInit();
+            this.scMain.ResumeLayout(false);
+            this.statusToolStrip.ResumeLayout(false);
+            this.statusToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,16 +196,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btOk;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip formToolTip;
         private System.Windows.Forms.ToolStrip tsMainMenu;
         private System.Windows.Forms.ToolStripButton tsbClients;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton tsbCalc;
+        private System.Windows.Forms.ToolStripButton tsbAbout;
+        private System.Windows.Forms.ToolStripButton tsbRecycle;
         private System.Windows.Forms.ToolStripButton tsbExit;
+        private System.Windows.Forms.SplitContainer scMain;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStrip statusToolStrip;
+        private System.Windows.Forms.ToolStripButton tsbStatus;
+        private System.Windows.Forms.ToolStripLabel tslStatus;
     }
 }
 

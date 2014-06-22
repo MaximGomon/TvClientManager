@@ -21,8 +21,23 @@ namespace TvClientManager
         private void btOk_Click(object sender, EventArgs e)
         {
             var clientService = ServiceManager.ServiceInstance;
-            textBox1.Text = clientService.GetServerData(5);
+            //textBox1.Text = clientService.GetServerData(5);
             clientService.Close();
+        }
+
+        private void tsbExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void MainForm_Resize(object sender, EventArgs e)
+        {
+            ResizeAllFormItems();
+        }
+
+        private void ResizeAllFormItems()
+        {
+            scMain.Height = this.Height - statusToolStrip.Height - tsMainMenu.Height;
         }
     }
 }
