@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="TvManagerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="TvManagerModelTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TvManagerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="TvManagerModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClientsSet" EntityType="TvManagerModel.Clients" />
+          <EntitySet Name="ChanelsSet" EntityType="TvManagerModel.Chanels" />
+          <EntitySet Name="ExecutorsSet" EntityType="TvManagerModel.Executors" />
+          <EntitySet Name="UserInfoSet" EntityType="TvManagerModel.UserInfo" />
+          <EntitySet Name="TemplatesSet" EntityType="TvManagerModel.Templates" />
+          <EntitySet Name="TemplateParamsSet" EntityType="TvManagerModel.TemplateParams" />
+          <EntitySet Name="ClientChanelsSet" EntityType="TvManagerModel.ClientChanels" />
+          <EntitySet Name="ClientStateSet" EntityType="TvManagerModel.ClientState" />
+          <EntitySet Name="ChanelStateSet" EntityType="TvManagerModel.ChanelState" />
+          <EntitySet Name="LanguagesSet" EntityType="TvManagerModel.Languages" />
+          <EntitySet Name="CurrenciesSet" EntityType="TvManagerModel.Currencies" />
+          <EntitySet Name="ContactPeopleSet" EntityType="TvManagerModel.ContactPeople" />
+          <EntitySet Name="PaymentsSet" EntityType="TvManagerModel.Payments" />
+          <EntitySet Name="BanksInfoSet" EntityType="TvManagerModel.BanksInfo" />
+          <EntitySet Name="PositionsSet" EntityType="TvManagerModel.Positions" />
+          <AssociationSet Name="ClientsClientState" Association="TvManagerModel.ClientsClientState">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="ClientState" EntitySet="ClientStateSet" />
+          </AssociationSet>
+          <AssociationSet Name="ChanelStateChanels" Association="TvManagerModel.ChanelStateChanels">
+            <End Role="ChanelState" EntitySet="ChanelStateSet" />
+            <End Role="Chanels" EntitySet="ChanelsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientChanelsChanels" Association="TvManagerModel.ClientChanelsChanels">
+            <End Role="ClientChanels" EntitySet="ClientChanelsSet" />
+            <End Role="Chanels" EntitySet="ChanelsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientChanelsClients" Association="TvManagerModel.ClientChanelsClients">
+            <End Role="ClientChanels" EntitySet="ClientChanelsSet" />
+            <End Role="Clients" EntitySet="ClientsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientsPayments" Association="TvManagerModel.ClientsPayments">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="Payments" EntitySet="PaymentsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientsExecutors" Association="TvManagerModel.ClientsExecutors">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="Executors" EntitySet="ExecutorsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientsContactPeople" Association="TvManagerModel.ClientsContactPeople">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="ContactPeople" EntitySet="ContactPeopleSet" />
+          </AssociationSet>
+          <AssociationSet Name="PositionsContactPeople" Association="TvManagerModel.PositionsContactPeople">
+            <End Role="Positions" EntitySet="PositionsSet" />
+            <End Role="ContactPeople" EntitySet="ContactPeopleSet" />
+          </AssociationSet>
+          <AssociationSet Name="BanksInfoClients" Association="TvManagerModel.BanksInfoClients">
+            <End Role="BanksInfo" EntitySet="BanksInfoSet" />
+            <End Role="Clients" EntitySet="ClientsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientsLanguages" Association="TvManagerModel.ClientsLanguages">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="Languages" EntitySet="LanguagesSet" />
+          </AssociationSet>
+          <AssociationSet Name="ChanelsLanguages" Association="TvManagerModel.ChanelsLanguages">
+            <End Role="Chanels" EntitySet="ChanelsSet" />
+            <End Role="Languages" EntitySet="LanguagesSet" />
+          </AssociationSet>
+          <AssociationSet Name="CurrenciesClients" Association="TvManagerModel.CurrenciesClients">
+            <End Role="Currencies" EntitySet="CurrenciesSet" />
+            <End Role="Clients" EntitySet="ClientsSet" />
+          </AssociationSet>
+          <AssociationSet Name="CurrenciesPayments" Association="TvManagerModel.CurrenciesPayments">
+            <End Role="Currencies" EntitySet="CurrenciesSet" />
+            <End Role="Payments" EntitySet="PaymentsSet" />
+          </AssociationSet>
+          <EntitySet Name="TemplateParamsTypeSet" EntityType="TvManagerModel.TemplateParamsType" />
+          <AssociationSet Name="TemplateParamsTypeTemplates" Association="TvManagerModel.TemplateParamsTypeTemplates">
+            <End Role="TemplateParamsType" EntitySet="TemplateParamsTypeSet" />
+            <End Role="Templates" EntitySet="TemplatesSet" />
+          </AssociationSet>
+          <AssociationSet Name="TemplateParamsTypeTemplateParams" Association="TvManagerModel.TemplateParamsTypeTemplateParams">
+            <End Role="TemplateParamsType" EntitySet="TemplateParamsTypeSet" />
+            <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
+          </AssociationSet>
+          <AssociationSet Name="TemplatesTemplateParams" Association="TvManagerModel.TemplatesTemplateParams">
+            <End Role="Templates" EntitySet="TemplatesSet" />
+            <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
+          </AssociationSet>
+          <AssociationSet Name="ClientsTemplateParams" Association="TvManagerModel.ClientsTemplateParams">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
+          </AssociationSet>
+          <EntitySet Name="FilesSet" EntityType="TvManagerModel.Files" />
+          <AssociationSet Name="ClientsFiles" Association="TvManagerModel.ClientsFiles">
+            <End Role="Clients" EntitySet="ClientsSet" />
+            <End Role="Files" EntitySet="FilesSet" />
+          </AssociationSet>
+          <AssociationSet Name="ChanelsFiles" Association="TvManagerModel.ChanelsFiles">
+            <End Role="Chanels" EntitySet="ChanelsSet" />
+            <End Role="Files" EntitySet="FilesSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="StateId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="ClientState" Relationship="TvManagerModel.ClientsClientState" FromRole="Clients" ToRole="ClientState" />
+          <NavigationProperty Name="ClientChanels" Relationship="TvManagerModel.ClientChanelsClients" FromRole="Clients" ToRole="ClientChanels" />
+          <NavigationProperty Name="Payments" Relationship="TvManagerModel.ClientsPayments" FromRole="Clients" ToRole="Payments" />
+          <Property Name="ExecutorID" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Executors" Relationship="TvManagerModel.ClientsExecutors" FromRole="Clients" ToRole="Executors" />
+          <NavigationProperty Name="ContactPeople" Relationship="TvManagerModel.ClientsContactPeople" FromRole="Clients" ToRole="ContactPeople" />
+          <Property Name="BankInfoId" Type="String" Nullable="false" />
+          <NavigationProperty Name="BanksInfo" Relationship="TvManagerModel.BanksInfoClients" FromRole="Clients" ToRole="BanksInfo" />
+          <Property Name="LanguageId" Type="Guid" Nullable="false" />
+          <Property Name="PayRate" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Languages" Relationship="TvManagerModel.ClientsLanguages" FromRole="Clients" ToRole="Languages" />
+          <Property Name="CurrencyId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Currencies" Relationship="TvManagerModel.CurrenciesClients" FromRole="Clients" ToRole="Currencies" />
+          <NavigationProperty Name="TemplateParams" Relationship="TvManagerModel.ClientsTemplateParams" FromRole="Clients" ToRole="TemplateParams" />
+          <Property Name="Code" Type="String" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+          <Property Name="Telephone" Type="String" Nullable="false" />
+          <NavigationProperty Name="Files" Relationship="TvManagerModel.ClientsFiles" FromRole="Clients" ToRole="Files" />
+        </EntityType>
+        <EntityType Name="Chanels">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="StateId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="ChanelState" Relationship="TvManagerModel.ChanelStateChanels" FromRole="Chanels" ToRole="ChanelState" />
+          <NavigationProperty Name="ClientChanels" Relationship="TvManagerModel.ClientChanelsChanels" FromRole="Chanels" ToRole="ClientChanels" />
+          <Property Name="LanguageId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Languages" Relationship="TvManagerModel.ChanelsLanguages" FromRole="Chanels" ToRole="Languages" />
+          <Property Name="TimeOffSet" Type="Int32" Nullable="false" DefaultValue="0" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Files" Relationship="TvManagerModel.ChanelsFiles" FromRole="Chanels" ToRole="Files" />
+        </EntityType>
+        <EntityType Name="Executors">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="String" Nullable="false" />
+          <Property Name="CreateDate" Type="String" Nullable="false" />
+          <Property Name="ModifiedDate" Type="String" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsExecutors" FromRole="Executors" ToRole="Clients" />
+          <Property Name="Name" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Login" Type="String" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTIme.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTIme.Now();" />
+          <Property Name="IsAdmin" Type="Byte" Nullable="false" DefaultValue="0" />
+        </EntityType>
+        <EntityType Name="Templates">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="String" Nullable="false" />
+          <Property Name="TemplateParamType" Type="Guid" />
+          <NavigationProperty Name="TemplateParamsType" Relationship="TvManagerModel.TemplateParamsTypeTemplates" FromRole="Templates" ToRole="TemplateParamsType" />
+          <NavigationProperty Name="TemplateParams" Relationship="TvManagerModel.TemplatesTemplateParams" FromRole="Templates" ToRole="TemplateParams" />
+        </EntityType>
+        <EntityType Name="TemplateParams">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateId" Type="Guid" Nullable="false" />
+          <Property Name="TypeId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="TemplateParamsType" Relationship="TvManagerModel.TemplateParamsTypeTemplateParams" FromRole="TemplateParams" ToRole="TemplateParamsType" />
+          <Property Name="ClientId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Templates" Relationship="TvManagerModel.TemplatesTemplateParams" FromRole="TemplateParams" ToRole="Templates" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsTemplateParams" FromRole="TemplateParams" ToRole="Clients" />
+          <Property Name="Title" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ClientChanels">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="Guid" Nullable="false" />
+          <Property Name="ChanelId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ClientChanelsChanels" FromRole="ClientChanels" ToRole="Chanels" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientChanelsClients" FromRole="ClientChanels" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="ClientState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="String" Nullable="false" />
+          <Property Name="CreateDate" Type="String" Nullable="false" />
+          <Property Name="ModifiedDate" Type="String" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="String" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsClientState" FromRole="ClientState" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="ChanelState">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ChanelStateChanels" FromRole="ChanelState" ToRole="Chanels" />
+        </EntityType>
+        <EntityType Name="Languages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsLanguages" FromRole="Languages" ToRole="Clients" />
+          <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ChanelsLanguages" FromRole="Languages" ToRole="Chanels" />
+        </EntityType>
+        <EntityType Name="Currencies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="String" Nullable="false" />
+          <Property Name="CreateDate" Type="String" Nullable="false" />
+          <Property Name="ModifiedDate" Type="String" Nullable="false" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.CurrenciesClients" FromRole="Currencies" ToRole="Clients" />
+          <Property Name="IsMain" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="Cource" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Payments" Relationship="TvManagerModel.CurrenciesPayments" FromRole="Currencies" ToRole="Payments" />
+        </EntityType>
+        <EntityType Name="ContactPeople">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="PositionId" Type="Guid" Nullable="false" />
+          <Property Name="ClientId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsContactPeople" FromRole="ContactPeople" ToRole="Clients" />
+          <NavigationProperty Name="Positions" Relationship="TvManagerModel.PositionsContactPeople" FromRole="ContactPeople" ToRole="Positions" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="Telephone" Type="String" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payments">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="Guid" Nullable="false" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="PayDate" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsPayments" FromRole="Payments" ToRole="Clients" />
+          <Property Name="Paid" Type="Double" Nullable="false" />
+          <Property Name="Dept" Type="Double" Nullable="false" />
+          <Property Name="CurrencyId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Currencies" Relationship="TvManagerModel.CurrenciesPayments" FromRole="Payments" ToRole="Currencies" />
+        </EntityType>
+        <EntityType Name="BanksInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.BanksInfoClients" FromRole="BanksInfo" ToRole="Clients" />
+        </EntityType>
+        <EntityType Name="Positions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <NavigationProperty Name="ContactPeople" Relationship="TvManagerModel.PositionsContactPeople" FromRole="Positions" ToRole="ContactPeople" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="ClientsClientState">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.ClientState" Role="ClientState" Multiplicity="*" />
+        </Association>
+        <Association Name="ChanelStateChanels">
+          <End Type="TvManagerModel.ChanelState" Role="ChanelState" Multiplicity="1" />
+          <End Type="TvManagerModel.Chanels" Role="Chanels" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientChanelsChanels">
+          <End Type="TvManagerModel.ClientChanels" Role="ClientChanels" Multiplicity="*" />
+          <End Type="TvManagerModel.Chanels" Role="Chanels" Multiplicity="1" />
+        </Association>
+        <Association Name="ClientChanelsClients">
+          <End Type="TvManagerModel.ClientChanels" Role="ClientChanels" Multiplicity="*" />
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+        </Association>
+        <Association Name="ClientsPayments">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.Payments" Role="Payments" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientsExecutors">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.Executors" Role="Executors" Multiplicity="1" />
+        </Association>
+        <Association Name="ClientsContactPeople">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.ContactPeople" Role="ContactPeople" Multiplicity="*" />
+        </Association>
+        <Association Name="PositionsContactPeople">
+          <End Type="TvManagerModel.Positions" Role="Positions" Multiplicity="1" />
+          <End Type="TvManagerModel.ContactPeople" Role="ContactPeople" Multiplicity="1" />
+        </Association>
+        <Association Name="BanksInfoClients">
+          <End Type="TvManagerModel.BanksInfo" Role="BanksInfo" Multiplicity="1" />
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+        </Association>
+        <Association Name="ClientsLanguages">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.Languages" Role="Languages" Multiplicity="1" />
+        </Association>
+        <Association Name="ChanelsLanguages">
+          <End Type="TvManagerModel.Chanels" Role="Chanels" Multiplicity="1" />
+          <End Type="TvManagerModel.Languages" Role="Languages" Multiplicity="1" />
+        </Association>
+        <Association Name="CurrenciesClients">
+          <End Type="TvManagerModel.Currencies" Role="Currencies" Multiplicity="1" />
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="*" />
+        </Association>
+        <Association Name="CurrenciesPayments">
+          <End Type="TvManagerModel.Currencies" Role="Currencies" Multiplicity="1" />
+          <End Type="TvManagerModel.Payments" Role="Payments" Multiplicity="*" />
+        </Association>
+        <EntityType Name="TemplateParamsType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="Title" Type="String" Nullable="false" />
+          <Property Name="Code" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Templates" Relationship="TvManagerModel.TemplateParamsTypeTemplates" FromRole="TemplateParamsType" ToRole="Templates" />
+          <NavigationProperty Name="TemplateParams" Relationship="TvManagerModel.TemplateParamsTypeTemplateParams" FromRole="TemplateParamsType" ToRole="TemplateParams" />
+        </EntityType>
+        <Association Name="TemplateParamsTypeTemplates">
+          <End Type="TvManagerModel.TemplateParamsType" Role="TemplateParamsType" Multiplicity="1" />
+          <End Type="TvManagerModel.Templates" Role="Templates" Multiplicity="1" />
+        </Association>
+        <Association Name="TemplateParamsTypeTemplateParams">
+          <End Type="TvManagerModel.TemplateParamsType" Role="TemplateParamsType" Multiplicity="1" />
+          <End Type="TvManagerModel.TemplateParams" Role="TemplateParams" Multiplicity="1" />
+        </Association>
+        <Association Name="TemplatesTemplateParams">
+          <End Type="TvManagerModel.Templates" Role="Templates" Multiplicity="1" />
+          <End Type="TvManagerModel.TemplateParams" Role="TemplateParams" Multiplicity="*" />
+        </Association>
+        <Association Name="ClientsTemplateParams">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.TemplateParams" Role="TemplateParams" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Files">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="Guid" Nullable="false" />
+          <Property Name="ChanelId" Type="Guid" Nullable="false" />
+          <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsFiles" FromRole="Files" ToRole="Clients" />
+          <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ChanelsFiles" FromRole="Files" ToRole="Chanels" />
+          <Property Name="Name" Type="String" Nullable="false" />
+          <Property Name="FileLocation" Type="String" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <Association Name="ClientsFiles">
+          <End Type="TvManagerModel.Clients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.Files" Role="Files" Multiplicity="*" />
+        </Association>
+        <Association Name="ChanelsFiles">
+          <End Type="TvManagerModel.Chanels" Role="Chanels" Multiplicity="1" />
+          <End Type="TvManagerModel.Files" Role="Files" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="TvManagerModel" />
+        <Alias Key="Target" Value="TvManagerModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="TvManagerModelContainer" StorageEntityContainer="TvManagerModelTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

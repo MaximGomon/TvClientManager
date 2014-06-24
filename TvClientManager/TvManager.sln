@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerConnectService", "Ser
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TvManagerServer", "TvManagerServer\TvManagerServer.csproj", "{3B18E4C8-C9B4-4BB0-B63F-74BA301CA477}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseWorker", "DatabaseWorker\DatabaseWorker.csproj", "{64F14F18-412A-49BA-A65C-205D12875B71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{3B18E4C8-C9B4-4BB0-B63F-74BA301CA477}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B18E4C8-C9B4-4BB0-B63F-74BA301CA477}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B18E4C8-C9B4-4BB0-B63F-74BA301CA477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64F14F18-412A-49BA-A65C-205D12875B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64F14F18-412A-49BA-A65C-205D12875B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64F14F18-412A-49BA-A65C-205D12875B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64F14F18-412A-49BA-A65C-205D12875B71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{4CCD96FA-0161-42FA-8CC3-C1845D8A0BE0} = {CB81E026-F655-4B39-BFE4-A0AAF01ABB3D}
 		{EABEB671-0628-4522-A041-0371F89F0412} = {504BB9BA-405A-44E0-8946-E767CD481E95}
 		{3B18E4C8-C9B4-4BB0-B63F-74BA301CA477} = {504BB9BA-405A-44E0-8946-E767CD481E95}
+		{64F14F18-412A-49BA-A65C-205D12875B71} = {504BB9BA-405A-44E0-8946-E767CD481E95}
 	EndGlobalSection
 EndGlobal
