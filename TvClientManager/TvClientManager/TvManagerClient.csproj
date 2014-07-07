@@ -61,6 +61,30 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewClient.Designer.cs">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewCurrency.Designer.cs">
+      <DependentUpon>NewCurrency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Executors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Executors.Designer.cs">
+      <DependentUpon>Executors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewLanguage.Designer.cs">
+      <DependentUpon>NewLanguage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +101,18 @@
     <Compile Include="ServiceManager.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewClient.resx">
+      <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewCurrency.resx">
+      <DependentUpon>NewCurrency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Executors.resx">
+      <DependentUpon>Executors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewLanguage.resx">
+      <DependentUpon>NewLanguage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

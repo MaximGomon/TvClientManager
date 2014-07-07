@@ -14,8 +14,8 @@
         <EntityTypeShape EntityType="TvManagerModel.ClientChanels" Width="1.5" PointX="2.5" PointY="1.5" IsExpanded="false" />
         <EntityTypeShape EntityType="TvManagerModel.ClientState" Width="1.5" PointX="2.5" PointY="0.5" IsExpanded="false" />
         <EntityTypeShape EntityType="TvManagerModel.ChanelState" Width="1.5" PointX="2.625" PointY="3.875" IsExpanded="false" />
-        <EntityTypeShape EntityType="TvManagerModel.Languages" Width="1.5" PointX="0.5" PointY="4.625" IsExpanded="false" />
-        <EntityTypeShape EntityType="TvManagerModel.Currencies" Width="1.5" PointX="0.5" PointY="5.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="TvManagerModel.Languages" Width="1.5" PointX="2.875" PointY="4.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="TvManagerModel.Currencies" Width="1.5" PointX="4.375" PointY="3.875" IsExpanded="false" />
         <EntityTypeShape EntityType="TvManagerModel.ContactPeople" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="false" />
         <EntityTypeShape EntityType="TvManagerModel.Payments" Width="1.5" PointX="2.5" PointY="1" IsExpanded="false" />
         <EntityTypeShape EntityType="TvManagerModel.BanksInfo" Width="1.5" PointX="4.875" PointY="7" />
@@ -41,6 +41,8 @@
         <EntityTypeShape EntityType="TvManagerModel.Files" Width="1.5" PointX="6.25" PointY="3.5" />
         <AssociationConnector Association="TvManagerModel.ClientsFiles" />
         <AssociationConnector Association="TvManagerModel.ChanelsFiles" />
+        <EntityTypeShape EntityType="TvManagerModel.FIleError" Width="1.5" PointX="8.25" PointY="3.5" />
+        <AssociationConnector Association="TvManagerModel.FIleErrorFiles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
