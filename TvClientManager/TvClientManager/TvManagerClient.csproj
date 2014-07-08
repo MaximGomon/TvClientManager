@@ -55,6 +55,42 @@
     <Compile Include="Forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Chanels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Chanels.Designer.cs">
+      <DependentUpon>Chanels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ContactPeoplePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactPeoplePosition.Designer.cs">
+      <DependentUpon>ContactPeoplePosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Currencies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Currencies.Designer.cs">
+      <DependentUpon>Currencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Languages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Languages.Designer.cs">
+      <DependentUpon>Languages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +102,18 @@
     </Compile>
     <Compile Include="Forms\NewClient.Designer.cs">
       <DependentUpon>NewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewContactPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewContactPeople.Designer.cs">
+      <DependentUpon>NewContactPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewContactPoeplePosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewContactPoeplePosition.Designer.cs">
+      <DependentUpon>NewContactPoeplePosition.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewCurrency.cs">
       <SubType>Form</SubType>
@@ -99,11 +147,35 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ServiceManager.cs" />
+    <EmbeddedResource Include="Forms\Chanels.resx">
+      <DependentUpon>Chanels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ContactPeoplePosition.resx">
+      <DependentUpon>ContactPeoplePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Currencies.resx">
+      <DependentUpon>Currencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Languages.resx">
+      <DependentUpon>Languages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewClient.resx">
       <DependentUpon>NewClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewContactPeople.resx">
+      <DependentUpon>NewContactPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewContactPoeplePosition.resx">
+      <DependentUpon>NewContactPoeplePosition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewCurrency.resx">
       <DependentUpon>NewCurrency.cs</DependentUpon>

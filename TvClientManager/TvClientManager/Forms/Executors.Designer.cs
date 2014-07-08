@@ -41,25 +41,25 @@
             this.tsbSave = new System.Windows.Forms.ToolStripButton();
             this.tsbCancel = new System.Windows.Forms.ToolStripButton();
             this.gbComments = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbComments = new System.Windows.Forms.TextBox();
             this.gbMain = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dtpIndDerghNumDate = new System.Windows.Forms.DateTimePicker();
+            this.tbPhone = new System.Windows.Forms.TextBox();
+            this.dtpDerghNumDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIndDerghNumber = new System.Windows.Forms.TextBox();
+            this.tbDerghNumber = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.lblTelephon = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.btName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            this.txtFullName = new System.Windows.Forms.TextBox();
+            this.tbBoss = new System.Windows.Forms.TextBox();
             this.lblFullName = new System.Windows.Forms.Label();
-            this.txtFAdress = new System.Windows.Forms.TextBox();
+            this.tbRealAdress = new System.Windows.Forms.TextBox();
             this.lblFAdress = new System.Windows.Forms.Label();
-            this.txtPAdress = new System.Windows.Forms.TextBox();
+            this.tbPostAdress = new System.Windows.Forms.TextBox();
             this.lblPAdress = new System.Windows.Forms.Label();
-            this.txtUrAdress = new System.Windows.Forms.TextBox();
+            this.tbUrAdress = new System.Windows.Forms.TextBox();
             this.lblUrAdress = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainSplitContainer)).BeginInit();
@@ -180,7 +180,7 @@
             // 
             // gbComments
             // 
-            this.gbComments.Controls.Add(this.textBox2);
+            this.gbComments.Controls.Add(this.tbComments);
             this.gbComments.Location = new System.Drawing.Point(10, 365);
             this.gbComments.Name = "gbComments";
             this.gbComments.Size = new System.Drawing.Size(658, 206);
@@ -188,33 +188,33 @@
             this.gbComments.TabStop = false;
             this.gbComments.Text = "Коментарии";
             // 
-            // textBox2
+            // tbComments
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 22);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(627, 169);
-            this.textBox2.TabIndex = 4;
+            this.tbComments.Location = new System.Drawing.Point(16, 22);
+            this.tbComments.Multiline = true;
+            this.tbComments.Name = "tbComments";
+            this.tbComments.Size = new System.Drawing.Size(627, 169);
+            this.tbComments.TabIndex = 4;
             // 
             // gbMain
             // 
-            this.gbMain.Controls.Add(this.textBox1);
-            this.gbMain.Controls.Add(this.dtpIndDerghNumDate);
+            this.gbMain.Controls.Add(this.tbPhone);
+            this.gbMain.Controls.Add(this.dtpDerghNumDate);
             this.gbMain.Controls.Add(this.label2);
             this.gbMain.Controls.Add(this.label1);
-            this.gbMain.Controls.Add(this.txtIndDerghNumber);
+            this.gbMain.Controls.Add(this.tbDerghNumber);
             this.gbMain.Controls.Add(this.lblEmail);
-            this.gbMain.Controls.Add(this.txtEmail);
+            this.gbMain.Controls.Add(this.tbEmail);
             this.gbMain.Controls.Add(this.lblTelephon);
-            this.gbMain.Controls.Add(this.txtName);
+            this.gbMain.Controls.Add(this.btName);
             this.gbMain.Controls.Add(this.lblName);
-            this.gbMain.Controls.Add(this.txtFullName);
+            this.gbMain.Controls.Add(this.tbBoss);
             this.gbMain.Controls.Add(this.lblFullName);
-            this.gbMain.Controls.Add(this.txtFAdress);
+            this.gbMain.Controls.Add(this.tbRealAdress);
             this.gbMain.Controls.Add(this.lblFAdress);
-            this.gbMain.Controls.Add(this.txtPAdress);
+            this.gbMain.Controls.Add(this.tbPostAdress);
             this.gbMain.Controls.Add(this.lblPAdress);
-            this.gbMain.Controls.Add(this.txtUrAdress);
+            this.gbMain.Controls.Add(this.tbUrAdress);
             this.gbMain.Controls.Add(this.lblUrAdress);
             this.gbMain.Location = new System.Drawing.Point(10, 34);
             this.gbMain.Name = "gbMain";
@@ -223,20 +223,20 @@
             this.gbMain.TabStop = false;
             this.gbMain.Text = "Общее";
             // 
-            // textBox1
+            // tbPhone
             // 
-            this.textBox1.Location = new System.Drawing.Point(430, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 20);
-            this.textBox1.TabIndex = 28;
+            this.tbPhone.Location = new System.Drawing.Point(430, 166);
+            this.tbPhone.Name = "tbPhone";
+            this.tbPhone.Size = new System.Drawing.Size(213, 20);
+            this.tbPhone.TabIndex = 28;
             // 
-            // dtpIndDerghNumDate
+            // dtpDerghNumDate
             // 
-            this.dtpIndDerghNumDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIndDerghNumDate.Location = new System.Drawing.Point(552, 223);
-            this.dtpIndDerghNumDate.Name = "dtpIndDerghNumDate";
-            this.dtpIndDerghNumDate.Size = new System.Drawing.Size(91, 20);
-            this.dtpIndDerghNumDate.TabIndex = 27;
+            this.dtpDerghNumDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDerghNumDate.Location = new System.Drawing.Point(552, 223);
+            this.dtpDerghNumDate.Name = "dtpDerghNumDate";
+            this.dtpDerghNumDate.Size = new System.Drawing.Size(91, 20);
+            this.dtpDerghNumDate.TabIndex = 27;
             // 
             // label2
             // 
@@ -256,12 +256,12 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Свидетельство про дер. реестрацию №:";
             // 
-            // txtIndDerghNumber
+            // tbDerghNumber
             // 
-            this.txtIndDerghNumber.Location = new System.Drawing.Point(339, 223);
-            this.txtIndDerghNumber.Name = "txtIndDerghNumber";
-            this.txtIndDerghNumber.Size = new System.Drawing.Size(188, 20);
-            this.txtIndDerghNumber.TabIndex = 23;
+            this.tbDerghNumber.Location = new System.Drawing.Point(339, 223);
+            this.tbDerghNumber.Name = "tbDerghNumber";
+            this.tbDerghNumber.Size = new System.Drawing.Size(188, 20);
+            this.tbDerghNumber.TabIndex = 23;
             // 
             // lblEmail
             // 
@@ -272,12 +272,12 @@
             this.lblEmail.TabIndex = 22;
             this.lblEmail.Text = "Email:";
             // 
-            // txtEmail
+            // tbEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(430, 136);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(213, 20);
-            this.txtEmail.TabIndex = 5;
+            this.tbEmail.Location = new System.Drawing.Point(430, 136);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(213, 20);
+            this.tbEmail.TabIndex = 5;
             // 
             // lblTelephon
             // 
@@ -288,12 +288,12 @@
             this.lblTelephon.TabIndex = 20;
             this.lblTelephon.Text = "Телефон:";
             // 
-            // txtName
+            // btName
             // 
-            this.txtName.Location = new System.Drawing.Point(107, 21);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(213, 20);
-            this.txtName.TabIndex = 0;
+            this.btName.Location = new System.Drawing.Point(107, 21);
+            this.btName.Name = "btName";
+            this.btName.Size = new System.Drawing.Size(213, 20);
+            this.btName.TabIndex = 0;
             // 
             // lblName
             // 
@@ -304,12 +304,12 @@
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Имя:";
             // 
-            // txtFullName
+            // tbBoss
             // 
-            this.txtFullName.Location = new System.Drawing.Point(107, 49);
-            this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(213, 20);
-            this.txtFullName.TabIndex = 1;
+            this.tbBoss.Location = new System.Drawing.Point(107, 49);
+            this.tbBoss.Name = "tbBoss";
+            this.tbBoss.Size = new System.Drawing.Size(213, 20);
+            this.tbBoss.TabIndex = 1;
             // 
             // lblFullName
             // 
@@ -320,13 +320,13 @@
             this.lblFullName.TabIndex = 18;
             this.lblFullName.Text = "Директор:";
             // 
-            // txtFAdress
+            // tbRealAdress
             // 
-            this.txtFAdress.Location = new System.Drawing.Point(339, 40);
-            this.txtFAdress.Multiline = true;
-            this.txtFAdress.Name = "txtFAdress";
-            this.txtFAdress.Size = new System.Drawing.Size(304, 88);
-            this.txtFAdress.TabIndex = 4;
+            this.tbRealAdress.Location = new System.Drawing.Point(339, 40);
+            this.tbRealAdress.Multiline = true;
+            this.tbRealAdress.Name = "tbRealAdress";
+            this.tbRealAdress.Size = new System.Drawing.Size(304, 88);
+            this.tbRealAdress.TabIndex = 4;
             // 
             // lblFAdress
             // 
@@ -337,13 +337,13 @@
             this.lblFAdress.TabIndex = 16;
             this.lblFAdress.Text = "Фактический адрес:";
             // 
-            // txtPAdress
+            // tbPostAdress
             // 
-            this.txtPAdress.Location = new System.Drawing.Point(16, 223);
-            this.txtPAdress.Multiline = true;
-            this.txtPAdress.Name = "txtPAdress";
-            this.txtPAdress.Size = new System.Drawing.Size(304, 88);
-            this.txtPAdress.TabIndex = 3;
+            this.tbPostAdress.Location = new System.Drawing.Point(16, 223);
+            this.tbPostAdress.Multiline = true;
+            this.tbPostAdress.Name = "tbPostAdress";
+            this.tbPostAdress.Size = new System.Drawing.Size(304, 88);
+            this.tbPostAdress.TabIndex = 3;
             // 
             // lblPAdress
             // 
@@ -354,13 +354,13 @@
             this.lblPAdress.TabIndex = 14;
             this.lblPAdress.Text = "Почтовый адрес:";
             // 
-            // txtUrAdress
+            // tbUrAdress
             // 
-            this.txtUrAdress.Location = new System.Drawing.Point(16, 103);
-            this.txtUrAdress.Multiline = true;
-            this.txtUrAdress.Name = "txtUrAdress";
-            this.txtUrAdress.Size = new System.Drawing.Size(304, 88);
-            this.txtUrAdress.TabIndex = 2;
+            this.tbUrAdress.Location = new System.Drawing.Point(16, 103);
+            this.tbUrAdress.Multiline = true;
+            this.tbUrAdress.Name = "tbUrAdress";
+            this.tbUrAdress.Size = new System.Drawing.Size(304, 88);
+            this.tbUrAdress.TabIndex = 2;
             // 
             // lblUrAdress
             // 
@@ -411,25 +411,25 @@
         private System.Windows.Forms.ToolStripButton tsbSave;
         private System.Windows.Forms.ToolStripButton tsbCancel;
         private System.Windows.Forms.GroupBox gbComments;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbComments;
         private System.Windows.Forms.GroupBox gbMain;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dtpIndDerghNumDate;
+        private System.Windows.Forms.TextBox tbPhone;
+        private System.Windows.Forms.DateTimePicker dtpDerghNumDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIndDerghNumber;
+        private System.Windows.Forms.TextBox tbDerghNumber;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lblTelephon;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox btName;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtFullName;
+        private System.Windows.Forms.TextBox tbBoss;
         private System.Windows.Forms.Label lblFullName;
-        private System.Windows.Forms.TextBox txtFAdress;
+        private System.Windows.Forms.TextBox tbRealAdress;
         private System.Windows.Forms.Label lblFAdress;
-        private System.Windows.Forms.TextBox txtPAdress;
+        private System.Windows.Forms.TextBox tbPostAdress;
         private System.Windows.Forms.Label lblPAdress;
-        private System.Windows.Forms.TextBox txtUrAdress;
+        private System.Windows.Forms.TextBox tbUrAdress;
         private System.Windows.Forms.Label lblUrAdress;
         private System.Windows.Forms.ToolTip toolTip1;
     }
