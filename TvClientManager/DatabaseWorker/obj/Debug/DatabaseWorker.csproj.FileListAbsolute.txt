@@ -1,0 +1,5 @@
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.dll.config
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.dll
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.pdb
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.dll
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.pdb

@@ -147,6 +147,49 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ServiceManager.cs" />
+    <Compile Include="UserControls\ITab.cs" />
+    <Compile Include="UserControls\TabBank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabBank.Designer.cs">
+      <DependentUpon>TabBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabChannels.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabChannels.Designer.cs">
+      <DependentUpon>TabChannels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabContactPeople.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabContactPeople.Designer.cs">
+      <DependentUpon>TabContactPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabFiles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabFiles.Designer.cs">
+      <DependentUpon>TabFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabGeneral.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabGeneral.Designer.cs">
+      <DependentUpon>TabGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabPrice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabPrice.Designer.cs">
+      <DependentUpon>TabPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TabServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TabServices.Designer.cs">
+      <DependentUpon>TabServices.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Chanels.resx">
       <DependentUpon>Chanels.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +238,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\TabBank.resx">
+      <DependentUpon>TabBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabChannels.resx">
+      <DependentUpon>TabChannels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabContactPeople.resx">
+      <DependentUpon>TabContactPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabFiles.resx">
+      <DependentUpon>TabFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabGeneral.resx">
+      <DependentUpon>TabGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabPrice.resx">
+      <DependentUpon>TabPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TabServices.resx">
+      <DependentUpon>TabServices.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

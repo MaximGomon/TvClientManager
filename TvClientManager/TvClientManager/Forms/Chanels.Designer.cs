@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Chanels));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tsExecutorsActivity = new System.Windows.Forms.ToolStrip();
+            this.tsbNewExecutor = new System.Windows.Forms.ToolStripButton();
+            this.tsbDeleteExecutor = new System.Windows.Forms.ToolStripButton();
+            this.tsbEditExecutor = new System.Windows.Forms.ToolStripButton();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.clonChCountTextBox = new System.Windows.Forms.TextBox();
             this.cancelFilterButton = new System.Windows.Forms.Button();
@@ -44,11 +48,10 @@
             this.lstClients = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tsExecutorsActivity = new System.Windows.Forms.ToolStrip();
-            this.tsbNewExecutor = new System.Windows.Forms.ToolStripButton();
-            this.tsbDeleteExecutor = new System.Windows.Forms.ToolStripButton();
-            this.tsbEditExecutor = new System.Windows.Forms.ToolStripButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tsOkCancel = new System.Windows.Forms.ToolStrip();
+            this.tsbSave = new System.Windows.Forms.ToolStripButton();
+            this.tsbCancel = new System.Windows.Forms.ToolStripButton();
             this.addTypeButton = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,9 +61,6 @@
             this.tbBoss = new System.Windows.Forms.TextBox();
             this.lblFullName = new System.Windows.Forms.Label();
             this.lblUrAdress = new System.Windows.Forms.Label();
-            this.tsOkCancel = new System.Windows.Forms.ToolStrip();
-            this.tsbSave = new System.Windows.Forms.ToolStripButton();
-            this.tsbCancel = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,13 +69,13 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.tsExecutorsActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.tcInfo.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tsExecutorsActivity.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tsOkCancel.SuspendLayout();
             this.SuspendLayout();
@@ -116,6 +116,45 @@
             this.splitContainer2.Size = new System.Drawing.Size(302, 411);
             this.splitContainer2.SplitterDistance = 25;
             this.splitContainer2.TabIndex = 2;
+            // 
+            // tsExecutorsActivity
+            // 
+            this.tsExecutorsActivity.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbNewExecutor,
+            this.tsbDeleteExecutor,
+            this.tsbEditExecutor});
+            this.tsExecutorsActivity.Location = new System.Drawing.Point(0, 0);
+            this.tsExecutorsActivity.Name = "tsExecutorsActivity";
+            this.tsExecutorsActivity.Size = new System.Drawing.Size(302, 25);
+            this.tsExecutorsActivity.TabIndex = 1;
+            this.tsExecutorsActivity.Text = "toolStrip1";
+            // 
+            // tsbNewExecutor
+            // 
+            this.tsbNewExecutor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNewExecutor.Image = ((System.Drawing.Image)(resources.GetObject("tsbNewExecutor.Image")));
+            this.tsbNewExecutor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNewExecutor.Name = "tsbNewExecutor";
+            this.tsbNewExecutor.Size = new System.Drawing.Size(23, 22);
+            this.tsbNewExecutor.Text = "toolStripButton1";
+            // 
+            // tsbDeleteExecutor
+            // 
+            this.tsbDeleteExecutor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDeleteExecutor.Image = ((System.Drawing.Image)(resources.GetObject("tsbDeleteExecutor.Image")));
+            this.tsbDeleteExecutor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDeleteExecutor.Name = "tsbDeleteExecutor";
+            this.tsbDeleteExecutor.Size = new System.Drawing.Size(23, 22);
+            this.tsbDeleteExecutor.Text = "toolStripButton1";
+            // 
+            // tsbEditExecutor
+            // 
+            this.tsbEditExecutor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbEditExecutor.Image = ((System.Drawing.Image)(resources.GetObject("tsbEditExecutor.Image")));
+            this.tsbEditExecutor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEditExecutor.Name = "tsbEditExecutor";
+            this.tsbEditExecutor.Size = new System.Drawing.Size(23, 22);
+            this.tsbEditExecutor.Text = "toolStripButton1";
             // 
             // splitContainer3
             // 
@@ -193,7 +232,7 @@
             // 
             this.columnHeader2.Tag = "S";
             this.columnHeader2.Text = "Название";
-            this.columnHeader2.Width = 250;
+            this.columnHeader2.Width = 244;
             // 
             // columnHeader7
             // 
@@ -252,45 +291,6 @@
             this.columnHeader5.Text = "Название";
             this.columnHeader5.Width = 600;
             // 
-            // tsExecutorsActivity
-            // 
-            this.tsExecutorsActivity.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbNewExecutor,
-            this.tsbDeleteExecutor,
-            this.tsbEditExecutor});
-            this.tsExecutorsActivity.Location = new System.Drawing.Point(0, 0);
-            this.tsExecutorsActivity.Name = "tsExecutorsActivity";
-            this.tsExecutorsActivity.Size = new System.Drawing.Size(302, 25);
-            this.tsExecutorsActivity.TabIndex = 1;
-            this.tsExecutorsActivity.Text = "toolStrip1";
-            // 
-            // tsbNewExecutor
-            // 
-            this.tsbNewExecutor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbNewExecutor.Image = ((System.Drawing.Image)(resources.GetObject("tsbNewExecutor.Image")));
-            this.tsbNewExecutor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbNewExecutor.Name = "tsbNewExecutor";
-            this.tsbNewExecutor.Size = new System.Drawing.Size(23, 22);
-            this.tsbNewExecutor.Text = "toolStripButton1";
-            // 
-            // tsbDeleteExecutor
-            // 
-            this.tsbDeleteExecutor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbDeleteExecutor.Image = ((System.Drawing.Image)(resources.GetObject("tsbDeleteExecutor.Image")));
-            this.tsbDeleteExecutor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbDeleteExecutor.Name = "tsbDeleteExecutor";
-            this.tsbDeleteExecutor.Size = new System.Drawing.Size(23, 22);
-            this.tsbDeleteExecutor.Text = "toolStripButton1";
-            // 
-            // tsbEditExecutor
-            // 
-            this.tsbEditExecutor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbEditExecutor.Image = ((System.Drawing.Image)(resources.GetObject("tsbEditExecutor.Image")));
-            this.tsbEditExecutor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEditExecutor.Name = "tsbEditExecutor";
-            this.tsbEditExecutor.Size = new System.Drawing.Size(23, 22);
-            this.tsbEditExecutor.Text = "toolStripButton1";
-            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tsOkCancel);
@@ -310,6 +310,35 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Детали";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tsOkCancel
+            // 
+            this.tsOkCancel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbSave,
+            this.tsbCancel});
+            this.tsOkCancel.Location = new System.Drawing.Point(3, 3);
+            this.tsOkCancel.Name = "tsOkCancel";
+            this.tsOkCancel.Size = new System.Drawing.Size(491, 25);
+            this.tsOkCancel.TabIndex = 34;
+            this.tsOkCancel.Text = "toolStrip2";
+            // 
+            // tsbSave
+            // 
+            this.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
+            this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbSave.Name = "tsbSave";
+            this.tsbSave.Size = new System.Drawing.Size(23, 22);
+            this.tsbSave.Text = "toolStripButton1";
+            // 
+            // tsbCancel
+            // 
+            this.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCancel.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancel.Image")));
+            this.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancel.Name = "tsbCancel";
+            this.tsbCancel.Size = new System.Drawing.Size(23, 22);
+            this.tsbCancel.Text = "toolStripButton1";
             // 
             // addTypeButton
             // 
@@ -388,35 +417,6 @@
             this.lblUrAdress.TabIndex = 25;
             this.lblUrAdress.Text = "Состояние:";
             // 
-            // tsOkCancel
-            // 
-            this.tsOkCancel.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbSave,
-            this.tsbCancel});
-            this.tsOkCancel.Location = new System.Drawing.Point(3, 3);
-            this.tsOkCancel.Name = "tsOkCancel";
-            this.tsOkCancel.Size = new System.Drawing.Size(491, 25);
-            this.tsOkCancel.TabIndex = 34;
-            this.tsOkCancel.Text = "toolStrip2";
-            // 
-            // tsbSave
-            // 
-            this.tsbSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbSave.Image = ((System.Drawing.Image)(resources.GetObject("tsbSave.Image")));
-            this.tsbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbSave.Name = "tsbSave";
-            this.tsbSave.Size = new System.Drawing.Size(23, 22);
-            this.tsbSave.Text = "toolStripButton1";
-            // 
-            // tsbCancel
-            // 
-            this.tsbCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbCancel.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancel.Image")));
-            this.tsbCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancel.Name = "tsbCancel";
-            this.tsbCancel.Size = new System.Drawing.Size(23, 22);
-            this.tsbCancel.Text = "toolStripButton1";
-            // 
             // Chanels
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,6 +435,8 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.tsExecutorsActivity.ResumeLayout(false);
+            this.tsExecutorsActivity.PerformLayout();
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -442,8 +444,6 @@
             this.splitContainer3.ResumeLayout(false);
             this.tcInfo.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tsExecutorsActivity.ResumeLayout(false);
-            this.tsExecutorsActivity.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tsOkCancel.ResumeLayout(false);

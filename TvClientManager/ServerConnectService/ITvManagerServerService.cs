@@ -17,6 +17,12 @@ namespace ServerConnectService
         string GetData(int value);
 
         [OperationContract]
+        bool ClientLogin(string login, string password);
+
+        [OperationContract]
+        Clients LoadClients(string login, string password);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here

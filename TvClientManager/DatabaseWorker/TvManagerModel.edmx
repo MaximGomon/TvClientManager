@@ -4,11 +4,583 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="TvManagerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="TvManagerModelTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="TvManagerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TvManagerModelStoreContainer">
+    <EntitySet Name="ClientsSet" EntityType="TvManagerModel.Store.ClientsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChanelsSet" EntityType="TvManagerModel.Store.ChanelsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExecutorsSet" EntityType="TvManagerModel.Store.ExecutorsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserInfoSet" EntityType="TvManagerModel.Store.UserInfoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TemplatesSet" EntityType="TvManagerModel.Store.TemplatesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TemplateParamsSet" EntityType="TvManagerModel.Store.TemplateParamsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClientChanelsSet" EntityType="TvManagerModel.Store.ClientChanelsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ClientStateSet" EntityType="TvManagerModel.Store.ClientStateSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChanelStateSet" EntityType="TvManagerModel.Store.ChanelStateSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LanguagesSet" EntityType="TvManagerModel.Store.LanguagesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CurrenciesSet" EntityType="TvManagerModel.Store.CurrenciesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactPeopleSet" EntityType="TvManagerModel.Store.ContactPeopleSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PaymentsSet" EntityType="TvManagerModel.Store.PaymentsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BanksInfoSet" EntityType="TvManagerModel.Store.BanksInfoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PositionsSet" EntityType="TvManagerModel.Store.PositionsSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TemplateParamsTypeSet" EntityType="TvManagerModel.Store.TemplateParamsTypeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FilesSet" EntityType="TvManagerModel.Store.FilesSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FIleErrorSet" EntityType="TvManagerModel.Store.FIleErrorSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ClientsClientState" Association="TvManagerModel.Store.ClientsClientState">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="ClientState" EntitySet="ClientStateSet" />
+    </AssociationSet>
+    <AssociationSet Name="ChanelStateChanels" Association="TvManagerModel.Store.ChanelStateChanels">
+      <End Role="ChanelState" EntitySet="ChanelStateSet" />
+      <End Role="Chanels" EntitySet="ChanelsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientChanelsChanels" Association="TvManagerModel.Store.ClientChanelsChanels">
+      <End Role="ClientChanels" EntitySet="ClientChanelsSet" />
+      <End Role="Chanels" EntitySet="ChanelsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientChanelsClients" Association="TvManagerModel.Store.ClientChanelsClients">
+      <End Role="ClientChanels" EntitySet="ClientChanelsSet" />
+      <End Role="Clients" EntitySet="ClientsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientsPayments" Association="TvManagerModel.Store.ClientsPayments">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="Payments" EntitySet="PaymentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientsExecutors" Association="TvManagerModel.Store.ClientsExecutors">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="Executors" EntitySet="ExecutorsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientsContactPeople" Association="TvManagerModel.Store.ClientsContactPeople">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="ContactPeople" EntitySet="ContactPeopleSet" />
+    </AssociationSet>
+    <AssociationSet Name="PositionsContactPeople" Association="TvManagerModel.Store.PositionsContactPeople">
+      <End Role="Positions" EntitySet="PositionsSet" />
+      <End Role="ContactPeople" EntitySet="ContactPeopleSet" />
+    </AssociationSet>
+    <AssociationSet Name="BanksInfoClients" Association="TvManagerModel.Store.BanksInfoClients">
+      <End Role="BanksInfo" EntitySet="BanksInfoSet" />
+      <End Role="Clients" EntitySet="ClientsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientsLanguages" Association="TvManagerModel.Store.ClientsLanguages">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="Languages" EntitySet="LanguagesSet" />
+    </AssociationSet>
+    <AssociationSet Name="ChanelsLanguages" Association="TvManagerModel.Store.ChanelsLanguages">
+      <End Role="Chanels" EntitySet="ChanelsSet" />
+      <End Role="Languages" EntitySet="LanguagesSet" />
+    </AssociationSet>
+    <AssociationSet Name="CurrenciesClients" Association="TvManagerModel.Store.CurrenciesClients">
+      <End Role="Currencies" EntitySet="CurrenciesSet" />
+      <End Role="Clients" EntitySet="ClientsSet" />
+    </AssociationSet>
+    <AssociationSet Name="CurrenciesPayments" Association="TvManagerModel.Store.CurrenciesPayments">
+      <End Role="Currencies" EntitySet="CurrenciesSet" />
+      <End Role="Payments" EntitySet="PaymentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="TemplateParamsTypeTemplates" Association="TvManagerModel.Store.TemplateParamsTypeTemplates">
+      <End Role="TemplateParamsType" EntitySet="TemplateParamsTypeSet" />
+      <End Role="Templates" EntitySet="TemplatesSet" />
+    </AssociationSet>
+    <AssociationSet Name="TemplateParamsTypeTemplateParams" Association="TvManagerModel.Store.TemplateParamsTypeTemplateParams">
+      <End Role="TemplateParamsType" EntitySet="TemplateParamsTypeSet" />
+      <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
+    </AssociationSet>
+    <AssociationSet Name="TemplatesTemplateParams" Association="TvManagerModel.Store.TemplatesTemplateParams">
+      <End Role="Templates" EntitySet="TemplatesSet" />
+      <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientsTemplateParams" Association="TvManagerModel.Store.ClientsTemplateParams">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
+    </AssociationSet>
+    <AssociationSet Name="ClientsFiles" Association="TvManagerModel.Store.ClientsFiles">
+      <End Role="Clients" EntitySet="ClientsSet" />
+      <End Role="Files" EntitySet="FilesSet" />
+    </AssociationSet>
+    <AssociationSet Name="ChanelsFiles" Association="TvManagerModel.Store.ChanelsFiles">
+      <End Role="Chanels" EntitySet="ChanelsSet" />
+      <End Role="Files" EntitySet="FilesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FIleErrorFiles" Association="TvManagerModel.Store.FIleErrorFiles">
+      <End Role="FIleError" EntitySet="FIleErrorSet" />
+      <End Role="Files" EntitySet="FilesSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ClientsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="StateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ExecutorID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BankInfoId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LanguageId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PayRate" Type="float" Nullable="false" />
+    <Property Name="CurrencyId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telephone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="BlockedDate" Type="datetime" Nullable="true" />
+    <Property Name="Executors_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Languages_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Currencies_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChanelsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="StateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LanguageId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TimeOffSet" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ChanelState_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Languages_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExecutorsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInfoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsAdmin" Type="tinyint" Nullable="false" DefaultValue="0" />
+  </EntityType>
+  <EntityType Name="TemplatesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TemplateParamType" Type="uniqueidentifier" Nullable="true" />
+  </EntityType>
+  <EntityType Name="TemplateParamsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClientId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Templates_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientChanelsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ChanelId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Chanels_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientStateSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChanelStateSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LanguagesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CurrenciesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="IsMain" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="Cource" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactPeopleSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="PositionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telephone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="PayDate" Type="datetime" Nullable="false" />
+    <Property Name="Paid" Type="float" Nullable="false" />
+    <Property Name="Dept" Type="float" Nullable="false" />
+    <Property Name="CurrencyId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Currencies_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BanksInfoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PositionsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="ContactPeople_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TemplateParamsTypeSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Templates_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemplateParams_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FilesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ChanelId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileLocation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Chanels_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FIleErrorSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ErrorDate" Type="datetime" Nullable="false" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Files_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="ClientsClientState">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <End Role="ClientState" Type="TvManagerModel.Store.ClientStateSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClientState">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChanelStateChanels">
+    <End Role="ChanelState" Type="TvManagerModel.Store.ChanelStateSet" Multiplicity="1" />
+    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChanelState">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Chanels">
+        <PropertyRef Name="ChanelState_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientChanelsChanels">
+    <End Role="ClientChanels" Type="TvManagerModel.Store.ClientChanelsSet" Multiplicity="*" />
+    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Chanels">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClientChanels">
+        <PropertyRef Name="Chanels_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientChanelsClients">
+    <End Role="ClientChanels" Type="TvManagerModel.Store.ClientChanelsSet" Multiplicity="*" />
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ClientChanels">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientsPayments">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <End Role="Payments" Type="TvManagerModel.Store.PaymentsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientsExecutors">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="*" />
+    <End Role="Executors" Type="TvManagerModel.Store.ExecutorsSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Executors">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="Executors_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientsContactPeople">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <End Role="ContactPeople" Type="TvManagerModel.Store.ContactPeopleSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContactPeople">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PositionsContactPeople">
+    <End Role="Positions" Type="TvManagerModel.Store.PositionsSet" Multiplicity="*" />
+    <End Role="ContactPeople" Type="TvManagerModel.Store.ContactPeopleSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ContactPeople">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Positions">
+        <PropertyRef Name="ContactPeople_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BanksInfoClients">
+    <End Role="BanksInfo" Type="TvManagerModel.Store.BanksInfoSet" Multiplicity="*" />
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BanksInfo">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientsLanguages">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="*" />
+    <End Role="Languages" Type="TvManagerModel.Store.LanguagesSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Languages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="Languages_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChanelsLanguages">
+    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="*" />
+    <End Role="Languages" Type="TvManagerModel.Store.LanguagesSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Languages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Chanels">
+        <PropertyRef Name="Languages_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CurrenciesClients">
+    <End Role="Currencies" Type="TvManagerModel.Store.CurrenciesSet" Multiplicity="1" />
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="Currencies_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CurrenciesPayments">
+    <End Role="Currencies" Type="TvManagerModel.Store.CurrenciesSet" Multiplicity="1" />
+    <End Role="Payments" Type="TvManagerModel.Store.PaymentsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currencies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Payments">
+        <PropertyRef Name="Currencies_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TemplateParamsTypeTemplates">
+    <End Role="TemplateParamsType" Type="TvManagerModel.Store.TemplateParamsTypeSet" Multiplicity="*" />
+    <End Role="Templates" Type="TvManagerModel.Store.TemplatesSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Templates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParamsType">
+        <PropertyRef Name="Templates_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TemplateParamsTypeTemplateParams">
+    <End Role="TemplateParamsType" Type="TvManagerModel.Store.TemplateParamsTypeSet" Multiplicity="*" />
+    <End Role="TemplateParams" Type="TvManagerModel.Store.TemplateParamsSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="TemplateParams">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParamsType">
+        <PropertyRef Name="TemplateParams_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TemplatesTemplateParams">
+    <End Role="Templates" Type="TvManagerModel.Store.TemplatesSet" Multiplicity="1" />
+    <End Role="TemplateParams" Type="TvManagerModel.Store.TemplateParamsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Templates">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParams">
+        <PropertyRef Name="Templates_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientsTemplateParams">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <End Role="TemplateParams" Type="TvManagerModel.Store.TemplateParamsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParams">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ClientsFiles">
+    <End Role="Clients" Type="TvManagerModel.Store.ClientsSet" Multiplicity="1" />
+    <End Role="Files" Type="TvManagerModel.Store.FilesSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="Clients_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChanelsFiles">
+    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="1" />
+    <End Role="Files" Type="TvManagerModel.Store.FilesSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chanels">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Files">
+        <PropertyRef Name="Chanels_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FIleErrorFiles">
+    <End Role="FIleError" Type="TvManagerModel.Store.FIleErrorSet" Multiplicity="*" />
+    <End Role="Files" Type="TvManagerModel.Store.FilesSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Files">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FIleError">
+        <PropertyRef Name="Files_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="TvManagerModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -118,8 +690,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="StateId" Type="Guid" Nullable="false" />
           <NavigationProperty Name="ClientState" Relationship="TvManagerModel.ClientsClientState" FromRole="Clients" ToRole="ClientState" />
           <NavigationProperty Name="ClientChanels" Relationship="TvManagerModel.ClientChanelsClients" FromRole="Clients" ToRole="ClientChanels" />
@@ -141,7 +713,7 @@
           <Property Name="Telephone" Type="String" Nullable="false" />
           <NavigationProperty Name="Files" Relationship="TvManagerModel.ClientsFiles" FromRole="Clients" ToRole="Files" />
           <Property Name="Comment" Type="String" Nullable="false" />
-          <Property Name="RegisterDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="RegisterDate" Type="DateTime" Nullable="false" />
           <Property Name="BlockedDate" Type="DateTime" />
         </EntityType>
         <EntityType Name="Chanels">
@@ -150,8 +722,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="StateId" Type="Guid" Nullable="false" />
           <NavigationProperty Name="ChanelState" Relationship="TvManagerModel.ChanelStateChanels" FromRole="Chanels" ToRole="ChanelState" />
           <NavigationProperty Name="ClientChanels" Relationship="TvManagerModel.ClientChanelsChanels" FromRole="Chanels" ToRole="ClientChanels" />
@@ -183,8 +755,8 @@
           <Property Name="Login" Type="String" Nullable="false" />
           <Property Name="Password" Type="String" Nullable="false" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTIme.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTIme.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="IsAdmin" Type="Byte" Nullable="false" DefaultValue="0" />
         </EntityType>
         <EntityType Name="Templates">
@@ -193,8 +765,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" />
           <Property Name="Code" Type="String" Nullable="false" />
           <Property Name="TemplateParamType" Type="Guid" />
@@ -254,8 +826,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" />
           <Property Name="Code" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsLanguages" FromRole="Languages" ToRole="Clients" />
@@ -282,8 +854,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="PositionId" Type="Guid" Nullable="false" />
           <Property Name="ClientId" Type="Guid" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsContactPeople" FromRole="ContactPeople" ToRole="Clients" />
@@ -299,8 +871,8 @@
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ClientId" Type="Guid" Nullable="false" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="PayDate" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsPayments" FromRole="Payments" ToRole="Clients" />
           <Property Name="Paid" Type="Double" Nullable="false" />
@@ -314,8 +886,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="Clients" Relationship="TvManagerModel.BanksInfoClients" FromRole="BanksInfo" ToRole="Clients" />
         </EntityType>
         <EntityType Name="Positions">
@@ -324,8 +896,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="ContactPeople" Relationship="TvManagerModel.PositionsContactPeople" FromRole="Positions" ToRole="ContactPeople" />
           <Property Name="Title" Type="String" Nullable="false" />
           <Property Name="Code" Type="Int32" Nullable="false" />
@@ -388,8 +960,8 @@
           </Key>
           <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
-          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" DefaultValue="DateTime.Now();" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+          <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
           <Property Name="Title" Type="String" Nullable="false" />
           <Property Name="Code" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Templates" Relationship="TvManagerModel.TemplateParamsTypeTemplates" FromRole="TemplateParamsType" ToRole="Templates" />
@@ -451,13 +1023,403 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="TvManagerModel" />
-        <Alias Key="Target" Value="TvManagerModel.Store" />
-        <EntityContainerMapping CdmEntityContainer="TvManagerModelContainer" StorageEntityContainer="TvManagerModelTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TvManagerModelStoreContainer" CdmEntityContainer="TvManagerModelContainer">
+    <EntitySetMapping Name="ClientsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Clients)">
+        <MappingFragment StoreEntitySet="ClientsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="ExecutorID" ColumnName="ExecutorID" />
+          <ScalarProperty Name="BankInfoId" ColumnName="BankInfoId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="PayRate" ColumnName="PayRate" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="BlockedDate" ColumnName="BlockedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChanelsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Chanels)">
+        <MappingFragment StoreEntitySet="ChanelsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="TimeOffSet" ColumnName="TimeOffSet" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExecutorsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Executors)">
+        <MappingFragment StoreEntitySet="ExecutorsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.UserInfo)">
+        <MappingFragment StoreEntitySet="UserInfoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplatesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Templates)">
+        <MappingFragment StoreEntitySet="TemplatesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TemplateParamType" ColumnName="TemplateParamType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateParamsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.TemplateParams)">
+        <MappingFragment StoreEntitySet="TemplateParamsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientChanelsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ClientChanels)">
+        <MappingFragment StoreEntitySet="ClientChanelsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanelId" ColumnName="ChanelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientStateSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ClientState)">
+        <MappingFragment StoreEntitySet="ClientStateSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChanelStateSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ChanelState)">
+        <MappingFragment StoreEntitySet="ChanelStateSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguagesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Languages)">
+        <MappingFragment StoreEntitySet="LanguagesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrenciesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Currencies)">
+        <MappingFragment StoreEntitySet="CurrenciesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+          <ScalarProperty Name="Cource" ColumnName="Cource" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactPeopleSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ContactPeople)">
+        <MappingFragment StoreEntitySet="ContactPeopleSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Payments)">
+        <MappingFragment StoreEntitySet="PaymentsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BanksInfoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.BanksInfo)">
+        <MappingFragment StoreEntitySet="BanksInfoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PositionsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Positions)">
+        <MappingFragment StoreEntitySet="PositionsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateParamsTypeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.TemplateParamsType)">
+        <MappingFragment StoreEntitySet="TemplateParamsTypeSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Files)">
+        <MappingFragment StoreEntitySet="FilesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanelId" ColumnName="ChanelId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIleErrorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.FIleError)">
+        <MappingFragment StoreEntitySet="FIleErrorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ErrorDate" ColumnName="ErrorDate" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ClientsClientState" TypeName="TvManagerModel.ClientsClientState" StoreEntitySet="ClientStateSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientState">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChanelStateChanels" TypeName="TvManagerModel.ChanelStateChanels" StoreEntitySet="ChanelsSet">
+      <EndProperty Name="ChanelState">
+        <ScalarProperty Name="Id" ColumnName="ChanelState_Id" />
+      </EndProperty>
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientChanelsChanels" TypeName="TvManagerModel.ClientChanelsChanels" StoreEntitySet="ClientChanelsSet">
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Chanels_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientChanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientChanelsClients" TypeName="TvManagerModel.ClientChanelsClients" StoreEntitySet="ClientChanelsSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientChanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsPayments" TypeName="TvManagerModel.ClientsPayments" StoreEntitySet="PaymentsSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="Payments">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsExecutors" TypeName="TvManagerModel.ClientsExecutors" StoreEntitySet="ClientsSet">
+      <EndProperty Name="Executors">
+        <ScalarProperty Name="Id" ColumnName="Executors_Id" />
+      </EndProperty>
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsContactPeople" TypeName="TvManagerModel.ClientsContactPeople" StoreEntitySet="ContactPeopleSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="ContactPeople">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PositionsContactPeople" TypeName="TvManagerModel.PositionsContactPeople" StoreEntitySet="PositionsSet">
+      <EndProperty Name="ContactPeople">
+        <ScalarProperty Name="Id" ColumnName="ContactPeople_Id" />
+      </EndProperty>
+      <EndProperty Name="Positions">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BanksInfoClients" TypeName="TvManagerModel.BanksInfoClients" StoreEntitySet="BanksInfoSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="BanksInfo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsLanguages" TypeName="TvManagerModel.ClientsLanguages" StoreEntitySet="ClientsSet">
+      <EndProperty Name="Languages">
+        <ScalarProperty Name="Id" ColumnName="Languages_Id" />
+      </EndProperty>
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChanelsLanguages" TypeName="TvManagerModel.ChanelsLanguages" StoreEntitySet="ChanelsSet">
+      <EndProperty Name="Languages">
+        <ScalarProperty Name="Id" ColumnName="Languages_Id" />
+      </EndProperty>
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CurrenciesClients" TypeName="TvManagerModel.CurrenciesClients" StoreEntitySet="ClientsSet">
+      <EndProperty Name="Currencies">
+        <ScalarProperty Name="Id" ColumnName="Currencies_Id" />
+      </EndProperty>
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CurrenciesPayments" TypeName="TvManagerModel.CurrenciesPayments" StoreEntitySet="PaymentsSet">
+      <EndProperty Name="Currencies">
+        <ScalarProperty Name="Id" ColumnName="Currencies_Id" />
+      </EndProperty>
+      <EndProperty Name="Payments">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TemplateParamsTypeTemplates" TypeName="TvManagerModel.TemplateParamsTypeTemplates" StoreEntitySet="TemplateParamsTypeSet">
+      <EndProperty Name="Templates">
+        <ScalarProperty Name="Id" ColumnName="Templates_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParamsType">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TemplateParamsTypeTemplateParams" TypeName="TvManagerModel.TemplateParamsTypeTemplateParams" StoreEntitySet="TemplateParamsTypeSet">
+      <EndProperty Name="TemplateParams">
+        <ScalarProperty Name="Id" ColumnName="TemplateParams_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParamsType">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TemplatesTemplateParams" TypeName="TvManagerModel.TemplatesTemplateParams" StoreEntitySet="TemplateParamsSet">
+      <EndProperty Name="Templates">
+        <ScalarProperty Name="Id" ColumnName="Templates_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParams">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsTemplateParams" TypeName="TvManagerModel.ClientsTemplateParams" StoreEntitySet="TemplateParamsSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParams">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsFiles" TypeName="TvManagerModel.ClientsFiles" StoreEntitySet="FilesSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="Files">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChanelsFiles" TypeName="TvManagerModel.ChanelsFiles" StoreEntitySet="FilesSet">
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Chanels_Id" />
+      </EndProperty>
+      <EndProperty Name="Files">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FIleErrorFiles" TypeName="TvManagerModel.FIleErrorFiles" StoreEntitySet="FIleErrorSet">
+      <EndProperty Name="Files">
+        <ScalarProperty Name="Id" ColumnName="Files_Id" />
+      </EndProperty>
+      <EndProperty Name="FIleError">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -471,6 +1433,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
