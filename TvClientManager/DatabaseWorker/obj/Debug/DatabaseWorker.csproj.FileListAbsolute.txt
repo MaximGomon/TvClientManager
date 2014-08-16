@@ -1,5 +1,9 @@
-E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.dll.config
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.dll
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.pdb
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.dll
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.pdb
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\EntityFramework.dll
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\EntityFramework.xml
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.csprojResolveAssemblyReference.cache
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\GlobalEntity.dll
+E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\GlobalEntity.pdb

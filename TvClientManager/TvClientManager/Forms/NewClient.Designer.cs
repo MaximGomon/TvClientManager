@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewClient));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btAddLang = new System.Windows.Forms.Button();
+            this.btAddCurrency = new System.Windows.Forms.Button();
+            this.tbEmail = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbFax = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btAddExecutor = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbLanguage = new System.Windows.Forms.ComboBox();
             this.lblLang = new System.Windows.Forms.Label();
             this.cbExecutor = new System.Windows.Forms.ComboBox();
@@ -51,14 +59,6 @@
             this.lblI_UAdress = new System.Windows.Forms.Label();
             this.tbPostAddress = new System.Windows.Forms.TextBox();
             this.lblI_PAdress = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btAddExecutor = new System.Windows.Forms.Button();
-            this.tbFax = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbEmail = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btAddCurrency = new System.Windows.Forms.Button();
-            this.btAddLang = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -103,6 +103,91 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Информация";
+            // 
+            // btAddLang
+            // 
+            this.btAddLang.Image = ((System.Drawing.Image)(resources.GetObject("btAddLang.Image")));
+            this.btAddLang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAddLang.Location = new System.Drawing.Point(575, 192);
+            this.btAddLang.Name = "btAddLang";
+            this.btAddLang.Size = new System.Drawing.Size(100, 34);
+            this.btAddLang.TabIndex = 32;
+            this.btAddLang.Text = "Добавить язык";
+            this.btAddLang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAddLang.UseVisualStyleBackColor = true;
+            this.btAddLang.Click += new System.EventHandler(this.btAddLang_Click);
+            // 
+            // btAddCurrency
+            // 
+            this.btAddCurrency.Image = ((System.Drawing.Image)(resources.GetObject("btAddCurrency.Image")));
+            this.btAddCurrency.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAddCurrency.Location = new System.Drawing.Point(471, 192);
+            this.btAddCurrency.Name = "btAddCurrency";
+            this.btAddCurrency.Size = new System.Drawing.Size(100, 34);
+            this.btAddCurrency.TabIndex = 31;
+            this.btAddCurrency.Text = "Добавить валюту";
+            this.btAddCurrency.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAddCurrency.UseVisualStyleBackColor = true;
+            this.btAddCurrency.Click += new System.EventHandler(this.btAddCurrency_Click);
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(135, 347);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(205, 20);
+            this.tbEmail.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 350);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "E-mail:";
+            // 
+            // tbFax
+            // 
+            this.tbFax.Location = new System.Drawing.Point(135, 319);
+            this.tbFax.Margin = new System.Windows.Forms.Padding(4);
+            this.tbFax.Name = "tbFax";
+            this.tbFax.Size = new System.Drawing.Size(205, 20);
+            this.tbFax.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 322);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Факс:";
+            // 
+            // btAddExecutor
+            // 
+            this.btAddExecutor.Image = ((System.Drawing.Image)(resources.GetObject("btAddExecutor.Image")));
+            this.btAddExecutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAddExecutor.Location = new System.Drawing.Point(363, 192);
+            this.btAddExecutor.Name = "btAddExecutor";
+            this.btAddExecutor.Size = new System.Drawing.Size(100, 34);
+            this.btAddExecutor.TabIndex = 26;
+            this.btAddExecutor.Text = "Добавить исполнитея";
+            this.btAddExecutor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btAddExecutor.UseVisualStyleBackColor = true;
+            this.btAddExecutor.Click += new System.EventHandler(this.btAddExecutor_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(362, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Путь для файлов:";
             // 
             // cbLanguage
             // 
@@ -299,88 +384,6 @@
             this.lblI_PAdress.TabIndex = 1;
             this.lblI_PAdress.Text = "Почтовый адрес:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Путь для файлов:";
-            // 
-            // btAddExecutor
-            // 
-            this.btAddExecutor.Image = ((System.Drawing.Image)(resources.GetObject("btAddExecutor.Image")));
-            this.btAddExecutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAddExecutor.Location = new System.Drawing.Point(363, 192);
-            this.btAddExecutor.Name = "btAddExecutor";
-            this.btAddExecutor.Size = new System.Drawing.Size(100, 34);
-            this.btAddExecutor.TabIndex = 26;
-            this.btAddExecutor.Text = "Добавить исполнитея";
-            this.btAddExecutor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btAddExecutor.UseVisualStyleBackColor = true;
-            // 
-            // tbFax
-            // 
-            this.tbFax.Location = new System.Drawing.Point(135, 319);
-            this.tbFax.Margin = new System.Windows.Forms.Padding(4);
-            this.tbFax.Name = "tbFax";
-            this.tbFax.Size = new System.Drawing.Size(205, 20);
-            this.tbFax.TabIndex = 27;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 322);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Факс:";
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(135, 347);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(205, 20);
-            this.tbEmail.TabIndex = 29;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 350);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "E-mail:";
-            // 
-            // btAddCurrency
-            // 
-            this.btAddCurrency.Image = ((System.Drawing.Image)(resources.GetObject("btAddCurrency.Image")));
-            this.btAddCurrency.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAddCurrency.Location = new System.Drawing.Point(471, 192);
-            this.btAddCurrency.Name = "btAddCurrency";
-            this.btAddCurrency.Size = new System.Drawing.Size(100, 34);
-            this.btAddCurrency.TabIndex = 31;
-            this.btAddCurrency.Text = "Добавить валюту";
-            this.btAddCurrency.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btAddCurrency.UseVisualStyleBackColor = true;
-            // 
-            // btAddLang
-            // 
-            this.btAddLang.Image = ((System.Drawing.Image)(resources.GetObject("btAddLang.Image")));
-            this.btAddLang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btAddLang.Location = new System.Drawing.Point(575, 192);
-            this.btAddLang.Name = "btAddLang";
-            this.btAddLang.Size = new System.Drawing.Size(100, 34);
-            this.btAddLang.TabIndex = 32;
-            this.btAddLang.Text = "Добавить язык";
-            this.btAddLang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btAddLang.UseVisualStyleBackColor = true;
-            // 
             // btSave
             // 
             this.btSave.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -389,21 +392,23 @@
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(109, 48);
             this.btSave.TabIndex = 4;
-            this.btSave.Text = "Сохранить";
+            this.btSave.Text = "Сохранить и закрыть";
             this.btSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // button1
             // 
             this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(596, 401);
-            this.button1.Name = "button1";
+            this.button1.Name = "btCansel";
             this.button1.Size = new System.Drawing.Size(109, 48);
             this.button1.TabIndex = 5;
             this.button1.Text = "Отменить";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btCansel_Click);
             // 
             // NewClient
             // 

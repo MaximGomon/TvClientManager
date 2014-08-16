@@ -6,22 +6,22 @@
       <xsd:import schemaLocation="http://localhost:8002/TvManagerClientService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="ITvManagerClientService_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
+  <wsdl:message name="ITvManagerClientService_GetServerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerData" />
   </wsdl:message>
-  <wsdl:message name="ITvManagerClientService_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  <wsdl:message name="ITvManagerClientService_GetServerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerDataResponse" />
   </wsdl:message>
   <wsdl:portType name="ITvManagerClientService">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITvManagerClientService/GetData" message="tns:ITvManagerClientService_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITvManagerClientService/GetDataResponse" message="tns:ITvManagerClientService_GetData_OutputMessage" />
+    <wsdl:operation name="GetServerData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITvManagerClientService/GetServerData" message="tns:ITvManagerClientService_GetServerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITvManagerClientService/GetServerDataResponse" message="tns:ITvManagerClientService_GetServerData_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITvManagerClientService" type="tns:ITvManagerClientService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/ITvManagerClientService/GetData" style="document" />
+    <wsdl:operation name="GetServerData">
+      <soap:operation soapAction="http://tempuri.org/ITvManagerClientService/GetServerData" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

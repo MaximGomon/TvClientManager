@@ -16,5 +16,17 @@ namespace TvClientManager.Forms
         {
             InitializeComponent();
         }
+
+        public AllLanguages CurrentLanguages { get; set; }
+
+        private void btSave_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using GlobalEntity;
 
 namespace ConnectService
 {
@@ -17,14 +18,33 @@ namespace ConnectService
         //    return string.Format("You entered: {0}", value);
         //}
 
-        public string GetServerData(int value)
+        //public string GetServerData(int value)
+        //{
+        //    string resp = String.Empty;
+
+        //    var serverService = ServiceManager.ServiceInstance;
+        //    resp = serverService.GetData(value);
+
+        //    return string.Format("Server return: {0}", resp);
+        //}
+        public bool ClientLogin(string login, string password)
         {
-            string resp = String.Empty;
-
             var serverService = ServiceManager.ServiceInstance;
-            resp = serverService.GetData(value);
 
-            return string.Format("Server return: {0}", resp);
+            bool result = serverService.ClientLogin(login, password);
+            serverService.Close();
+
+            return result;
+        }
+
+        public List<TvClients> LoadClients()
+        {
+            var serverService = ServiceManager.ServiceInstance;
+
+            var result = serverService.LoadClients().ToList();
+            serverService.Close();
+
+            return result;
         }
     }
 }

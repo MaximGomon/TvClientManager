@@ -30,14 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -48,105 +45,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BanksInfo.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Chanels.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ChanelState.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientChanels.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Clients.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ClientState.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ContactPeople.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Currencies.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Executors.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FIleError.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Files.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Languages.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Payments.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Positions.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="CriteriaParam.cs" />
+    <Compile Include="DbHelpercs.cs" />
+    <Compile Include="IMemberCriteria.cs" />
+    <Compile Include="MemberOperatorType.cs" />
+    <Compile Include="OredrParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TemplateParams.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TemplateParamsType.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TvManagerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TvManagerModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TvManagerModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TvManagerModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TvManagerModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="UserInfo.cs">
-      <DependentUpon>TvManagerModel.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="TvManagerModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TvManagerModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
-    <None Include="TvManagerModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TvManagerModel.Context.cs</LastGenOutput>
-      <DependentUpon>TvManagerModel.edmx</DependentUpon>
-    </None>
-    <None Include="TvManagerModel.edmx.diagram">
-      <DependentUpon>TvManagerModel.edmx</DependentUpon>
-    </None>
-    <None Include="TvManagerModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TvManagerModel.cs</LastGenOutput>
-      <DependentUpon>TvManagerModel.edmx</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="TvManagerModel.edmx.sql" />
+    <Compile Include="QueryParams.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalEntity\GlobalEntity.csproj">
+      <Project>{58C21D48-5EE5-48EC-9E97-98B3A2780A07}</Project>
+      <Name>GlobalEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

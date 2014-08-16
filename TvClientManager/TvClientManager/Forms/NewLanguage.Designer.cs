@@ -33,7 +33,7 @@
             this.tbCurrencyName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btCancel = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.cbIsDefault = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -70,17 +70,18 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Название:";
             // 
-            // button1
+            // btCancel
             // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(120, 92);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 48);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Отменить";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btCancel.Image = ((System.Drawing.Image)(resources.GetObject("btCancel.Image")));
+            this.btCancel.Location = new System.Drawing.Point(120, 92);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(109, 48);
+            this.btCancel.TabIndex = 15;
+            this.btCancel.Text = "Отменить";
+            this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btSave
             // 
@@ -93,6 +94,7 @@
             this.btSave.Text = "Сохранить";
             this.btSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // cbIsDefault
             // 
@@ -114,7 +116,7 @@
             this.Controls.Add(this.tbCurrencyName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -133,7 +135,7 @@
         private System.Windows.Forms.TextBox tbCurrencyName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.CheckBox cbIsDefault;
     }

@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TvManagerModelStoreContainer" CdmEntityContainer="TvManagerModelContainer">
+    <EntitySetMapping Name="TvClientsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.TvClients)">
+        <MappingFragment StoreEntitySet="TvClientsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="ExecutorID" ColumnName="ExecutorID" />
+          <ScalarProperty Name="BankInfoId" ColumnName="BankInfoId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="PayRate" ColumnName="PayRate" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="RegisterDate" ColumnName="RegisterDate" />
+          <ScalarProperty Name="BlockedDate" ColumnName="BlockedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChanelsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Chanels)">
+        <MappingFragment StoreEntitySet="ChanelsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="StateId" ColumnName="StateId" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="TimeOffSet" ColumnName="TimeOffSet" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExecutorsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Executors)">
+        <MappingFragment StoreEntitySet="ExecutorsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.UserInfo)">
+        <MappingFragment StoreEntitySet="UserInfoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplatesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Templates)">
+        <MappingFragment StoreEntitySet="TemplatesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="TemplateParamType" ColumnName="TemplateParamType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateParamsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.TemplateParams)">
+        <MappingFragment StoreEntitySet="TemplateParamsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TemplateId" ColumnName="TemplateId" />
+          <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientChanelsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ClientChanels)">
+        <MappingFragment StoreEntitySet="ClientChanelsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanelId" ColumnName="ChanelId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientStateSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ClientState)">
+        <MappingFragment StoreEntitySet="ClientStateSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChanelStateSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ChanelState)">
+        <MappingFragment StoreEntitySet="ChanelStateSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguagesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Languages)">
+        <MappingFragment StoreEntitySet="LanguagesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CurrenciesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Currencies)">
+        <MappingFragment StoreEntitySet="CurrenciesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="IsMain" ColumnName="IsMain" />
+          <ScalarProperty Name="Cource" ColumnName="Cource" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContactPeopleSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.ContactPeople)">
+        <MappingFragment StoreEntitySet="ContactPeopleSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PositionId" ColumnName="PositionId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Payments)">
+        <MappingFragment StoreEntitySet="PaymentsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Dept" ColumnName="Dept" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BanksInfoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.BanksInfo)">
+        <MappingFragment StoreEntitySet="BanksInfoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PositionsSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Positions)">
+        <MappingFragment StoreEntitySet="PositionsSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TemplateParamsTypeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.TemplateParamsType)">
+        <MappingFragment StoreEntitySet="TemplateParamsTypeSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FilesSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.Files)">
+        <MappingFragment StoreEntitySet="FilesSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ChanelId" ColumnName="ChanelId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FileLocation" ColumnName="FileLocation" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FIleErrorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.FIleError)">
+        <MappingFragment StoreEntitySet="FIleErrorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ErrorDate" ColumnName="ErrorDate" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="FileId" ColumnName="FileId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ClientsClientState" TypeName="TvManagerModel.ClientsClientState" StoreEntitySet="ClientStateSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientState">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChanelStateChanels" TypeName="TvManagerModel.ChanelStateChanels" StoreEntitySet="ChanelsSet">
+      <EndProperty Name="ChanelState">
+        <ScalarProperty Name="Id" ColumnName="ChanelState_Id" />
+      </EndProperty>
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientChanelsChanels" TypeName="TvManagerModel.ClientChanelsChanels" StoreEntitySet="ClientChanelsSet">
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Chanels_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientChanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientChanelsClients" TypeName="TvManagerModel.ClientChanelsClients" StoreEntitySet="ClientChanelsSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="ClientChanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsPayments" TypeName="TvManagerModel.ClientsPayments" StoreEntitySet="PaymentsSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="Payments">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsExecutors" TypeName="TvManagerModel.ClientsExecutors" StoreEntitySet="TvClientsSet">
+      <EndProperty Name="Executors">
+        <ScalarProperty Name="Id" ColumnName="Executors_Id" />
+      </EndProperty>
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsContactPeople" TypeName="TvManagerModel.ClientsContactPeople" StoreEntitySet="ContactPeopleSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="ContactPeople">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PositionsContactPeople" TypeName="TvManagerModel.PositionsContactPeople" StoreEntitySet="PositionsSet">
+      <EndProperty Name="ContactPeople">
+        <ScalarProperty Name="Id" ColumnName="ContactPeople_Id" />
+      </EndProperty>
+      <EndProperty Name="Positions">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BanksInfoClients" TypeName="TvManagerModel.BanksInfoClients" StoreEntitySet="BanksInfoSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="BanksInfo">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsLanguages" TypeName="TvManagerModel.ClientsLanguages" StoreEntitySet="TvClientsSet">
+      <EndProperty Name="Languages">
+        <ScalarProperty Name="Id" ColumnName="Languages_Id" />
+      </EndProperty>
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChanelsLanguages" TypeName="TvManagerModel.ChanelsLanguages" StoreEntitySet="ChanelsSet">
+      <EndProperty Name="Languages">
+        <ScalarProperty Name="Id" ColumnName="Languages_Id" />
+      </EndProperty>
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CurrenciesClients" TypeName="TvManagerModel.CurrenciesClients" StoreEntitySet="TvClientsSet">
+      <EndProperty Name="Currencies">
+        <ScalarProperty Name="Id" ColumnName="Currencies_Id" />
+      </EndProperty>
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CurrenciesPayments" TypeName="TvManagerModel.CurrenciesPayments" StoreEntitySet="PaymentsSet">
+      <EndProperty Name="Currencies">
+        <ScalarProperty Name="Id" ColumnName="Currencies_Id" />
+      </EndProperty>
+      <EndProperty Name="Payments">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TemplateParamsTypeTemplates" TypeName="TvManagerModel.TemplateParamsTypeTemplates" StoreEntitySet="TemplateParamsTypeSet">
+      <EndProperty Name="Templates">
+        <ScalarProperty Name="Id" ColumnName="Templates_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParamsType">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TemplateParamsTypeTemplateParams" TypeName="TvManagerModel.TemplateParamsTypeTemplateParams" StoreEntitySet="TemplateParamsTypeSet">
+      <EndProperty Name="TemplateParams">
+        <ScalarProperty Name="Id" ColumnName="TemplateParams_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParamsType">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="TemplatesTemplateParams" TypeName="TvManagerModel.TemplatesTemplateParams" StoreEntitySet="TemplateParamsSet">
+      <EndProperty Name="Templates">
+        <ScalarProperty Name="Id" ColumnName="Templates_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParams">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsTemplateParams" TypeName="TvManagerModel.ClientsTemplateParams" StoreEntitySet="TemplateParamsSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="TemplateParams">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ClientsFiles" TypeName="TvManagerModel.ClientsFiles" StoreEntitySet="FilesSet">
+      <EndProperty Name="Clients">
+        <ScalarProperty Name="Id" ColumnName="Clients_Id" />
+      </EndProperty>
+      <EndProperty Name="Files">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChanelsFiles" TypeName="TvManagerModel.ChanelsFiles" StoreEntitySet="FilesSet">
+      <EndProperty Name="Chanels">
+        <ScalarProperty Name="Id" ColumnName="Chanels_Id" />
+      </EndProperty>
+      <EndProperty Name="Files">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FIleErrorFiles" TypeName="TvManagerModel.FIleErrorFiles" StoreEntitySet="FIleErrorSet">
+      <EndProperty Name="Files">
+        <ScalarProperty Name="Id" ColumnName="Files_Id" />
+      </EndProperty>
+      <EndProperty Name="FIleError">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

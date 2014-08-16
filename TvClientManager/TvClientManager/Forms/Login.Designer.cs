@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.tbUserLogin = new System.Windows.Forms.TextBox();
-            this.tbLogin = new System.Windows.Forms.Button();
+            this.btLogin = new System.Windows.Forms.Button();
             this.tbUserPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbRememberMe = new System.Windows.Forms.CheckBox();
@@ -54,14 +54,15 @@
             this.tbUserLogin.Size = new System.Drawing.Size(231, 20);
             this.tbUserLogin.TabIndex = 0;
             // 
-            // tbLogin
+            // btLogin
             // 
-            this.tbLogin.Image = ((System.Drawing.Image)(resources.GetObject("tbLogin.Image")));
-            this.tbLogin.Location = new System.Drawing.Point(183, 76);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(49, 45);
-            this.tbLogin.TabIndex = 3;
-            this.tbLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Image = ((System.Drawing.Image)(resources.GetObject("btLogin.Image")));
+            this.btLogin.Location = new System.Drawing.Point(183, 76);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(49, 45);
+            this.btLogin.TabIndex = 3;
+            this.btLogin.UseVisualStyleBackColor = true;
+            this.btLogin.Click += new System.EventHandler(this.tbLogin_Click);
             // 
             // tbUserPassword
             // 
@@ -97,6 +98,7 @@
             this.btExit.Size = new System.Drawing.Size(49, 45);
             this.btExit.TabIndex = 4;
             this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // Login
             // 
@@ -107,7 +109,7 @@
             this.Controls.Add(this.cbRememberMe);
             this.Controls.Add(this.tbUserPassword);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.btLogin);
             this.Controls.Add(this.tbUserLogin);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -122,7 +124,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbUserLogin;
-        private System.Windows.Forms.Button tbLogin;
+        private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.TextBox tbUserPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox cbRememberMe;

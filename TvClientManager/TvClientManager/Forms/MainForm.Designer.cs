@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.formToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tsMainMenu = new System.Windows.Forms.ToolStrip();
-            this.tsbClients = new System.Windows.Forms.ToolStripButton();
+            this.tsbExecutors = new System.Windows.Forms.ToolStripButton();
             this.tsbCalc = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbChanels = new System.Windows.Forms.ToolStripButton();
             this.tsbRecycle = new System.Windows.Forms.ToolStripButton();
             this.tsbAbout = new System.Windows.Forms.ToolStripButton();
             this.tsbExit = new System.Windows.Forms.ToolStripButton();
             this.scMain = new System.Windows.Forms.SplitContainer();
             this.scClients = new System.Windows.Forms.SplitContainer();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsClientCommands = new System.Windows.Forms.ToolStrip();
             this.tsbNewClient = new System.Windows.Forms.ToolStripButton();
             this.tsbDeleteClient = new System.Windows.Forms.ToolStripButton();
             this.tsbPrint = new System.Windows.Forms.ToolStripSplitButton();
@@ -50,11 +50,8 @@
             this.lvClientsList = new System.Windows.Forms.ListView();
             this.image = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Code = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CLientName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tsClientActions = new System.Windows.Forms.ToolStrip();
-            this.tsbAddClient = new System.Windows.Forms.ToolStripButton();
-            this.tsbRemoveClient = new System.Windows.Forms.ToolStripButton();
             this.tsClientInfoActions = new System.Windows.Forms.ToolStrip();
             this.tbsSaveClientDetails = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelSaveClientDatails = new System.Windows.Forms.ToolStripButton();
@@ -62,14 +59,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabGeneral = new System.Windows.Forms.TabPage();
             this.tabBank = new System.Windows.Forms.TabPage();
-            this.statusToolStrip = new System.Windows.Forms.ToolStrip();
-            this.tsbStatus = new System.Windows.Forms.ToolStripButton();
-            this.tslStatus = new System.Windows.Forms.ToolStripLabel();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.statusToolStrip = new System.Windows.Forms.ToolStrip();
+            this.tsbStatus = new System.Windows.Forms.ToolStripButton();
+            this.tslStatus = new System.Windows.Forms.ToolStripLabel();
+            this.lbProgramStatus = new System.Windows.Forms.ToolStripLabel();
+            this.tsbCurrencies = new System.Windows.Forms.ToolStripButton();
             this.tsMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
@@ -79,12 +78,11 @@
             this.scClients.Panel1.SuspendLayout();
             this.scClients.Panel2.SuspendLayout();
             this.scClients.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.tsClientCommands.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.tsClientActions.SuspendLayout();
             this.tsClientInfoActions.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.statusToolStrip.SuspendLayout();
@@ -93,9 +91,10 @@
             // tsMainMenu
             // 
             this.tsMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbClients,
+            this.tsbExecutors,
             this.tsbCalc,
-            this.toolStripButton1,
+            this.tsbChanels,
+            this.tsbCurrencies,
             this.tsbRecycle,
             this.tsbAbout,
             this.tsbExit});
@@ -104,18 +103,18 @@
             this.tsMainMenu.Size = new System.Drawing.Size(922, 38);
             this.tsMainMenu.TabIndex = 3;
             // 
-            // tsbClients
+            // tsbExecutors
             // 
-            this.tsbClients.AutoSize = false;
-            this.tsbClients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tsbClients.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbClients.Image = ((System.Drawing.Image)(resources.GetObject("tsbClients.Image")));
-            this.tsbClients.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbClients.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbClients.Name = "tsbClients";
-            this.tsbClients.Size = new System.Drawing.Size(35, 35);
-            this.tsbClients.Text = "toolStripButton1";
-            this.tsbClients.ToolTipText = "Список клієнтів";
+            this.tsbExecutors.AutoSize = false;
+            this.tsbExecutors.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tsbExecutors.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbExecutors.Image = ((System.Drawing.Image)(resources.GetObject("tsbExecutors.Image")));
+            this.tsbExecutors.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbExecutors.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbExecutors.Name = "tsbExecutors";
+            this.tsbExecutors.Size = new System.Drawing.Size(35, 35);
+            this.tsbExecutors.ToolTipText = "Список виконавців";
+            this.tsbExecutors.Click += new System.EventHandler(this.tsbClients_Click);
             // 
             // tsbCalc
             // 
@@ -131,17 +130,17 @@
             this.tsbCalc.ToolTipText = "Калькулятор";
             this.tsbCalc.Click += new System.EventHandler(this.tsbCalc_Click);
             // 
-            // toolStripButton1
+            // tsbChanels
             // 
-            this.toolStripButton1.AutoSize = false;
-            this.toolStripButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(35, 35);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsbChanels.AutoSize = false;
+            this.tsbChanels.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tsbChanels.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbChanels.Image = ((System.Drawing.Image)(resources.GetObject("tsbChanels.Image")));
+            this.tsbChanels.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbChanels.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbChanels.Name = "tsbChanels";
+            this.tsbChanels.Size = new System.Drawing.Size(35, 35);
+            this.tsbChanels.Click += new System.EventHandler(this.tsbChanels_Click);
             // 
             // tsbRecycle
             // 
@@ -209,7 +208,7 @@
             // 
             // scClients.Panel1
             // 
-            this.scClients.Panel1.Controls.Add(this.toolStrip1);
+            this.scClients.Panel1.Controls.Add(this.tsClientCommands);
             // 
             // scClients.Panel2
             // 
@@ -218,17 +217,17 @@
             this.scClients.SplitterDistance = 26;
             this.scClients.TabIndex = 0;
             // 
-            // toolStrip1
+            // tsClientCommands
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsClientCommands.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbNewClient,
             this.tsbDeleteClient,
             this.tsbPrint});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(225, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tsClientCommands.Location = new System.Drawing.Point(0, 0);
+            this.tsClientCommands.Name = "tsClientCommands";
+            this.tsClientCommands.Size = new System.Drawing.Size(225, 25);
+            this.tsClientCommands.TabIndex = 0;
+            this.tsClientCommands.Text = "toolStrip1";
             // 
             // tsbNewClient
             // 
@@ -238,6 +237,7 @@
             this.tsbNewClient.Name = "tsbNewClient";
             this.tsbNewClient.Size = new System.Drawing.Size(23, 22);
             this.tsbNewClient.Text = "toolStripButton2";
+            this.tsbNewClient.Click += new System.EventHandler(this.tsbNewClient_Click);
             // 
             // tsbDeleteClient
             // 
@@ -264,19 +264,19 @@
             // актToolStripMenuItem
             // 
             this.актToolStripMenuItem.Name = "актToolStripMenuItem";
-            this.актToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.актToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.актToolStripMenuItem.Text = "Акт";
             // 
             // договорToolStripMenuItem
             // 
             this.договорToolStripMenuItem.Name = "договорToolStripMenuItem";
-            this.договорToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.договорToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.договорToolStripMenuItem.Text = "Договор";
             // 
             // счетToolStripMenuItem
             // 
             this.счетToolStripMenuItem.Name = "счетToolStripMenuItem";
-            this.счетToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.счетToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.счетToolStripMenuItem.Text = "Счет";
             // 
             // lvClientsList
@@ -284,7 +284,7 @@
             this.lvClientsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.image,
             this.Code,
-            this.Name});
+            this.CLientName});
             this.lvClientsList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvClientsList.FullRowSelect = true;
             this.lvClientsList.GridLines = true;
@@ -307,9 +307,9 @@
             this.Code.Text = "Код";
             this.Code.Width = 85;
             // 
-            // Name
+            // CLientName
             // 
-            this.Name.Text = "Название";
+            this.CLientName.Text = "Название";
             // 
             // splitContainer1
             // 
@@ -320,7 +320,6 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.tsClientActions);
             this.splitContainer1.Panel1.Controls.Add(this.tsClientInfoActions);
             // 
             // splitContainer1.Panel2
@@ -329,35 +328,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(693, 413);
             this.splitContainer1.SplitterDistance = 25;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // tsClientActions
-            // 
-            this.tsClientActions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbAddClient,
-            this.tsbRemoveClient});
-            this.tsClientActions.Location = new System.Drawing.Point(0, 25);
-            this.tsClientActions.Name = "tsClientActions";
-            this.tsClientActions.Size = new System.Drawing.Size(693, 25);
-            this.tsClientActions.TabIndex = 0;
-            this.tsClientActions.Text = "toolStrip1";
-            // 
-            // tsbAddClient
-            // 
-            this.tsbAddClient.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbAddClient.Image = ((System.Drawing.Image)(resources.GetObject("tsbAddClient.Image")));
-            this.tsbAddClient.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbAddClient.Name = "tsbAddClient";
-            this.tsbAddClient.Size = new System.Drawing.Size(23, 22);
-            this.tsbAddClient.Text = "toolStripButton2";
-            // 
-            // tsbRemoveClient
-            // 
-            this.tsbRemoveClient.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbRemoveClient.Image = ((System.Drawing.Image)(resources.GetObject("tsbRemoveClient.Image")));
-            this.tsbRemoveClient.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbRemoveClient.Name = "tsbRemoveClient";
-            this.tsbRemoveClient.Size = new System.Drawing.Size(23, 22);
-            this.tsbRemoveClient.Text = "toolStripButton2";
             // 
             // tsClientInfoActions
             // 
@@ -434,12 +404,63 @@
             this.tabBank.Text = "Банк";
             this.tabBank.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(685, 358);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Каналы";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(685, 358);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Услуги";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(685, 358);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Контактные лица";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(685, 358);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Оплата";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(685, 358);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "Файлы";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // statusToolStrip
             // 
             this.statusToolStrip.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.statusToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbStatus,
-            this.tslStatus});
+            this.tslStatus,
+            this.lbProgramStatus});
             this.statusToolStrip.Location = new System.Drawing.Point(0, 458);
             this.statusToolStrip.Name = "statusToolStrip";
             this.statusToolStrip.Size = new System.Drawing.Size(922, 25);
@@ -461,55 +482,22 @@
             this.tslStatus.Name = "tslStatus";
             this.tslStatus.Size = new System.Drawing.Size(0, 22);
             // 
-            // tabPage3
+            // lbProgramStatus
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(685, 358);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Каналы";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.lbProgramStatus.Name = "lbProgramStatus";
+            this.lbProgramStatus.Size = new System.Drawing.Size(86, 22);
+            this.lbProgramStatus.Text = "toolStripLabel1";
             // 
-            // tabPage4
+            // tsbCurrencies
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(733, 358);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Услуги";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(733, 358);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Контактные лица";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(733, 358);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Оплата";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(733, 358);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "Файлы";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.tsbCurrencies.AutoSize = false;
+            this.tsbCurrencies.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbCurrencies.Image = ((System.Drawing.Image)(resources.GetObject("tsbCurrencies.Image")));
+            this.tsbCurrencies.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbCurrencies.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCurrencies.Name = "tsbCurrencies";
+            this.tsbCurrencies.Size = new System.Drawing.Size(35, 35);
+            this.tsbCurrencies.Click += new System.EventHandler(this.tsbCurrencies_Click);
             // 
             // MainForm
             // 
@@ -535,15 +523,13 @@
             this.scClients.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scClients)).EndInit();
             this.scClients.ResumeLayout(false);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.tsClientCommands.ResumeLayout(false);
+            this.tsClientCommands.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.tsClientActions.ResumeLayout(false);
-            this.tsClientActions.PerformLayout();
             this.tsClientInfoActions.ResumeLayout(false);
             this.tsClientInfoActions.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -558,13 +544,13 @@
 
         private System.Windows.Forms.ToolTip formToolTip;
         private System.Windows.Forms.ToolStrip tsMainMenu;
-        private System.Windows.Forms.ToolStripButton tsbClients;
+        private System.Windows.Forms.ToolStripButton tsbExecutors;
         private System.Windows.Forms.ToolStripButton tsbCalc;
         private System.Windows.Forms.ToolStripButton tsbAbout;
         private System.Windows.Forms.ToolStripButton tsbRecycle;
         private System.Windows.Forms.ToolStripButton tsbExit;
         private System.Windows.Forms.SplitContainer scMain;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsbChanels;
         private System.Windows.Forms.ToolStrip statusToolStrip;
         private System.Windows.Forms.ToolStripButton tsbStatus;
         private System.Windows.Forms.ToolStripLabel tslStatus;
@@ -577,14 +563,11 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabGeneral;
         private System.Windows.Forms.TabPage tabBank;
-        private System.Windows.Forms.ToolStrip tsClientActions;
-        private System.Windows.Forms.ToolStripButton tsbAddClient;
-        private System.Windows.Forms.ToolStripButton tsbRemoveClient;
         private System.Windows.Forms.ListView lvClientsList;
         private System.Windows.Forms.ColumnHeader image;
         private System.Windows.Forms.ColumnHeader Code;
-        private System.Windows.Forms.ColumnHeader Name;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ColumnHeader CLientName;
+        private System.Windows.Forms.ToolStrip tsClientCommands;
         private System.Windows.Forms.ToolStripButton tsbNewClient;
         private System.Windows.Forms.ToolStripButton tsbDeleteClient;
         private System.Windows.Forms.ToolStripSplitButton tsbPrint;
@@ -596,6 +579,8 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.ToolStripLabel lbProgramStatus;
+        private System.Windows.Forms.ToolStripButton tsbCurrencies;
     }
 }
 

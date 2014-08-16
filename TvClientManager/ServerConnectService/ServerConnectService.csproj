@@ -106,6 +106,16 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseWorker\DatabaseWorker.csproj">
+      <Project>{64f14f18-412a-49ba-a65c-205d12875b71}</Project>
+      <Name>DatabaseWorker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GlobalEntity\GlobalEntity.csproj">
+      <Project>{58C21D48-5EE5-48EC-9E97-98B3A2780A07}</Project>
+      <Name>GlobalEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -67,17 +67,17 @@
     <Compile Include="Forms\ContactPeoplePosition.Designer.cs">
       <DependentUpon>ContactPeoplePosition.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Currencies.cs">
+    <Compile Include="Forms\AllCurrency.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Currencies.Designer.cs">
-      <DependentUpon>Currencies.cs</DependentUpon>
+    <Compile Include="Forms\AllCurrency.Designer.cs">
+      <DependentUpon>AllCurrency.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Languages.cs">
+    <Compile Include="Forms\AllLanguages.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Languages.Designer.cs">
-      <DependentUpon>Languages.cs</DependentUpon>
+    <Compile Include="Forms\AllLanguages.Designer.cs">
+      <DependentUpon>AllLanguages.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Loading.cs">
       <SubType>Form</SubType>
@@ -121,11 +121,17 @@
     <Compile Include="Forms\NewCurrency.Designer.cs">
       <DependentUpon>NewCurrency.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Executors.cs">
+    <Compile Include="Forms\AllExecutors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Executors.Designer.cs">
-      <DependentUpon>Executors.cs</DependentUpon>
+    <Compile Include="Forms\AllExecutors.Designer.cs">
+      <DependentUpon>AllExecutors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewExecutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewExecutor.Designer.cs">
+      <DependentUpon>NewExecutor.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewLanguage.cs">
       <SubType>Form</SubType>
@@ -138,6 +144,12 @@
     </Compile>
     <Compile Include="Forms\SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AllCLients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AllCLients.Designer.cs">
+      <DependentUpon>AllCLients.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,11 +208,11 @@
     <EmbeddedResource Include="Forms\ContactPeoplePosition.resx">
       <DependentUpon>ContactPeoplePosition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Currencies.resx">
-      <DependentUpon>Currencies.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AllCurrency.resx">
+      <DependentUpon>AllCurrency.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Languages.resx">
-      <DependentUpon>Languages.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AllLanguages.resx">
+      <DependentUpon>AllLanguages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
@@ -223,11 +235,17 @@
     <EmbeddedResource Include="Forms\NewCurrency.resx">
       <DependentUpon>NewCurrency.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Executors.resx">
-      <DependentUpon>Executors.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AllExecutors.resx">
+      <DependentUpon>AllExecutors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewExecutor.resx">
+      <DependentUpon>NewExecutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewLanguage.resx">
       <DependentUpon>NewLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AllCLients.resx">
+      <DependentUpon>AllCLients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -268,11 +286,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\ServiceReference\TvClientManager.ServiceReference.TvClients.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceReference\TvManagerClientService.wsdl" />
     <None Include="Service References\ServiceReference\TvManagerClientService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReference\TvManagerClientService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\TvManagerClientService2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -302,6 +326,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ampeross-Qetto-2-Groups.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalEntity\GlobalEntity.csproj">
+      <Project>{58c21d48-5ee5-48ec-9e97-98b3a2780a07}</Project>
+      <Name>GlobalEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

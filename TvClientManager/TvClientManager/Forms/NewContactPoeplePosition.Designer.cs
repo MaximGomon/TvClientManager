@@ -78,6 +78,7 @@
             this.btCancel.Text = "Отменить";
             this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btSave
             // 
@@ -87,9 +88,10 @@
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(109, 48);
             this.btSave.TabIndex = 10;
-            this.btSave.Text = "Сохранить";
+            this.btSave.Text = "Сохранить и закрыть";
             this.btSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // NewContactPoeplePosition
             // 

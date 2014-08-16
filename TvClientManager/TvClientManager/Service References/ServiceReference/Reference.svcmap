@@ -23,6 +23,7 @@
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="TvManagerClientService.xsd" MetadataType="Schema" ID="5dbdd282-36fc-43cd-9fa8-5868779a6171" SourceId="1" SourceUrl="http://localhost:8002/TvManagerClientService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TvManagerClientService2.xsd" MetadataType="Schema" ID="6303bd29-59ac-46e3-a892-0f840c19d407" SourceId="1" SourceUrl="http://localhost:8002/TvManagerClientService.svc?xsd=xsd2" />
     <MetadataFile FileName="TvManagerClientService.wsdl" MetadataType="Wsdl" ID="fd316631-234d-4d34-b893-eac4943a8b4f" SourceId="1" SourceUrl="http://localhost:8002/TvManagerClientService.svc?wsdl" />
     <MetadataFile FileName="TvManagerClientService1.xsd" MetadataType="Schema" ID="bd391b35-6002-409b-a1de-cce6b34b2aca" SourceId="1" SourceUrl="http://localhost:8002/TvManagerClientService.svc?xsd=xsd0" />
     <MetadataFile FileName="TvManagerClientService.disco" MetadataType="Disco" ID="06aab66d-d2e1-4b11-8199-ebbc30a9ae26" SourceId="1" SourceUrl="http://localhost:8002/TvManagerClientService.svc?disco" />

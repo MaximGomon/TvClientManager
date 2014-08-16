@@ -8,3 +8,10 @@ E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\ServerConnectSe
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\ServerConnectService.pdb
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.dll
 E:\Work\TVClientManager\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.pdb
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\obj\Debug\ServerConnectService.csprojResolveAssemblyReference.cache
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\DatabaseWorker.dll
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\GlobalEntity.dll
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\EntityFramework.dll
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\DatabaseWorker.pdb
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\GlobalEntity.pdb
+E:\Work\TVClientManager\TvClientManager\ServerConnectService\bin\EntityFramework.xml

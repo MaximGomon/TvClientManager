@@ -15,11 +15,11 @@ namespace ServerConnectService.ServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.ITvManagerClientService")]
     public interface ITvManagerClientService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITvManagerClientService/GetData", ReplyAction="http://tempuri.org/ITvManagerClientService/GetDataResponse")]
-        string GetData(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITvManagerClientService/GetServerData", ReplyAction="http://tempuri.org/ITvManagerClientService/GetServerDataResponse")]
+        string GetServerData(int value);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITvManagerClientService/GetData", ReplyAction="http://tempuri.org/ITvManagerClientService/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITvManagerClientService/GetServerData", ReplyAction="http://tempuri.org/ITvManagerClientService/GetServerDataResponse")]
+        System.Threading.Tasks.Task<string> GetServerDataAsync(int value);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +49,12 @@ namespace ServerConnectService.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
+        public string GetServerData(int value) {
+            return base.Channel.GetServerData(value);
         }
         
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
+        public System.Threading.Tasks.Task<string> GetServerDataAsync(int value) {
+            return base.Channel.GetServerDataAsync(value);
         }
     }
 }

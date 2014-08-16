@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/GlobalEntity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GlobalEntity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8002/TvManagerClientService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfTvClients">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TvClients" nillable="true" type="tns:TvClients" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTvClients" nillable="true" type="tns:ArrayOfTvClients" />
+  <xs:complexType name="TvClients">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankInfoId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BanksInfo" nillable="true" type="tns:BanksInfo" />
+      <xs:element minOccurs="0" name="BlockedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ClientChanels" nillable="true" type="tns:ArrayOfClientChanels" />
+      <xs:element minOccurs="0" name="ClientState" nillable="true" type="tns:ArrayOfClientState" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPeople" nillable="true" type="tns:ArrayOfContactPeople" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Currencies" nillable="true" type="tns:Currencies" />
+      <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExecutorID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Executors" nillable="true" type="tns:Executors" />
+      <xs:element minOccurs="0" name="Files" nillable="true" type="tns:ArrayOfFiles" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="LanguageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Languages" nillable="true" type="tns:Languages" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PayRate" type="xs:double" />
+      <xs:element minOccurs="0" name="Payments" nillable="true" type="tns:ArrayOfPayments" />
+      <xs:element minOccurs="0" name="RegisterDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StateId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateParams" nillable="true" type="tns:ArrayOfTemplateParams" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TvClients" nillable="true" type="tns:TvClients" />
+  <xs:complexType name="BanksInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BanksInfo" nillable="true" type="tns:BanksInfo" />
+  <xs:complexType name="ArrayOfClientChanels">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientChanels" nillable="true" type="tns:ClientChanels" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientChanels" nillable="true" type="tns:ArrayOfClientChanels" />
+  <xs:complexType name="ClientChanels">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChanelId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Chanels" nillable="true" type="tns:Chanels" />
+      <xs:element minOccurs="0" name="ClientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientChanels" nillable="true" type="tns:ClientChanels" />
+  <xs:complexType name="Chanels">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChanelState" nillable="true" type="tns:ChanelState" />
+      <xs:element minOccurs="0" name="ClientChanels" nillable="true" type="tns:ArrayOfClientChanels" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Files" nillable="true" type="tns:ArrayOfFiles" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="LanguageId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Languages" nillable="true" type="tns:Languages" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StateId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TimeOffSet" type="xs:int" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Chanels" nillable="true" type="tns:Chanels" />
+  <xs:complexType name="ChanelState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chanels" nillable="true" type="tns:ArrayOfChanels" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChanelState" nillable="true" type="tns:ChanelState" />
+  <xs:complexType name="ArrayOfChanels">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Chanels" nillable="true" type="tns:Chanels" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChanels" nillable="true" type="tns:ArrayOfChanels" />
+  <xs:complexType name="ArrayOfFiles">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Files" nillable="true" type="tns:Files" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFiles" nillable="true" type="tns:ArrayOfFiles" />
+  <xs:complexType name="Files">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChanelId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Chanels" nillable="true" type="tns:Chanels" />
+      <xs:element minOccurs="0" name="ClientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FIleError" nillable="true" type="tns:ArrayOfFIleError" />
+      <xs:element minOccurs="0" name="FileLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Files" nillable="true" type="tns:Files" />
+  <xs:complexType name="ArrayOfFIleError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FIleError" nillable="true" type="tns:FIleError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFIleError" nillable="true" type="tns:ArrayOfFIleError" />
+  <xs:complexType name="FIleError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Files" nillable="true" type="tns:Files" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FIleError" nillable="true" type="tns:FIleError" />
+  <xs:complexType name="Languages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chanels" nillable="true" type="tns:Chanels" />
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Languages" nillable="true" type="tns:Languages" />
+  <xs:complexType name="ArrayOfClientState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientState" nillable="true" type="tns:ClientState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientState" nillable="true" type="tns:ArrayOfClientState" />
+  <xs:complexType name="ClientState">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientState" nillable="true" type="tns:ClientState" />
+  <xs:complexType name="ArrayOfContactPeople">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactPeople" nillable="true" type="tns:ContactPeople" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactPeople" nillable="true" type="tns:ArrayOfContactPeople" />
+  <xs:complexType name="ContactPeople">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PositionId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Positions" nillable="true" type="tns:Positions" />
+      <xs:element minOccurs="0" name="Telephone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactPeople" nillable="true" type="tns:ContactPeople" />
+  <xs:complexType name="Positions">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactPeople" nillable="true" type="tns:ContactPeople" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Positions" nillable="true" type="tns:Positions" />
+  <xs:complexType name="Currencies">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:ArrayOfTvClients" />
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="Cource" type="xs:double" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsMain" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Payments" nillable="true" type="tns:ArrayOfPayments" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Currencies" nillable="true" type="tns:Currencies" />
+  <xs:complexType name="ArrayOfPayments">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Payments" nillable="true" type="tns:Payments" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayments" nillable="true" type="tns:ArrayOfPayments" />
+  <xs:complexType name="Payments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="ser:guid" />
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Currencies" nillable="true" type="tns:Currencies" />
+      <xs:element minOccurs="0" name="CurrencyId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dept" type="xs:double" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Paid" type="xs:double" />
+      <xs:element minOccurs="0" name="PayDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payments" nillable="true" type="tns:Payments" />
+  <xs:complexType name="Executors">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Executors" nillable="true" type="tns:Executors" />
+  <xs:complexType name="ArrayOfTemplateParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TemplateParams" nillable="true" type="tns:TemplateParams" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTemplateParams" nillable="true" type="tns:ArrayOfTemplateParams" />
+  <xs:complexType name="TemplateParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clients" nillable="true" type="tns:TvClients" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="TemplateId" type="ser:guid" />
+      <xs:element minOccurs="0" name="TemplateParamsType" nillable="true" type="tns:TemplateParamsType" />
+      <xs:element minOccurs="0" name="Templates" nillable="true" type="tns:Templates" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateParams" nillable="true" type="tns:TemplateParams" />
+  <xs:complexType name="TemplateParamsType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TemplateParams" nillable="true" type="tns:TemplateParams" />
+      <xs:element minOccurs="0" name="Templates" nillable="true" type="tns:Templates" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateParamsType" nillable="true" type="tns:TemplateParamsType" />
+  <xs:complexType name="Templates">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="IsDelete" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TemplateParamType" nillable="true" type="ser:guid" />
+      <xs:element minOccurs="0" name="TemplateParams" nillable="true" type="tns:ArrayOfTemplateParams" />
+      <xs:element minOccurs="0" name="TemplateParamsType" nillable="true" type="tns:TemplateParamsType" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Templates" nillable="true" type="tns:Templates" />
+</xs:schema>

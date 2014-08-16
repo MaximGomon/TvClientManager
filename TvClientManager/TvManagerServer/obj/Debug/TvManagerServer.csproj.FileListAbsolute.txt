@@ -5,3 +5,4 @@ E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServe
 E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csproj.GenerateResource.Cache
 E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.exe
 E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.pdb
+E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csprojResolveAssemblyReference.cache

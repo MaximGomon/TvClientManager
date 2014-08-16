@@ -32,13 +32,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.addTypeButton = new System.Windows.Forms.Button();
             this.lblFIO = new System.Windows.Forms.Label();
-            this.cmbPosition = new System.Windows.Forms.ComboBox();
-            this.txtFIO = new System.Windows.Forms.TextBox();
+            this.cbPosition = new System.Windows.Forms.ComboBox();
+            this.tbFullName = new System.Windows.Forms.TextBox();
             this.lblPosition = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.tbEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
-            this.txtTel = new System.Windows.Forms.TextBox();
+            this.tbTelephone = new System.Windows.Forms.TextBox();
             this.btCancel = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -48,13 +48,13 @@
             // 
             this.groupBox1.Controls.Add(this.addTypeButton);
             this.groupBox1.Controls.Add(this.lblFIO);
-            this.groupBox1.Controls.Add(this.cmbPosition);
-            this.groupBox1.Controls.Add(this.txtFIO);
+            this.groupBox1.Controls.Add(this.cbPosition);
+            this.groupBox1.Controls.Add(this.tbFullName);
             this.groupBox1.Controls.Add(this.lblPosition);
-            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Controls.Add(this.lblEmail);
             this.groupBox1.Controls.Add(this.lblTel);
-            this.groupBox1.Controls.Add(this.txtTel);
+            this.groupBox1.Controls.Add(this.tbTelephone);
             this.groupBox1.Location = new System.Drawing.Point(4, 13);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -73,6 +73,7 @@
             this.addTypeButton.Size = new System.Drawing.Size(24, 23);
             this.addTypeButton.TabIndex = 3;
             this.addTypeButton.UseVisualStyleBackColor = true;
+            this.addTypeButton.Click += new System.EventHandler(this.addTypeButton_Click);
             // 
             // lblFIO
             // 
@@ -84,23 +85,23 @@
             this.lblFIO.TabIndex = 0;
             this.lblFIO.Text = "ФИО:";
             // 
-            // cmbPosition
+            // cbPosition
             // 
-            this.cmbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(84, 112);
-            this.cmbPosition.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(271, 21);
-            this.cmbPosition.TabIndex = 4;
+            this.cbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPosition.FormattingEnabled = true;
+            this.cbPosition.Location = new System.Drawing.Point(84, 112);
+            this.cbPosition.Margin = new System.Windows.Forms.Padding(4);
+            this.cbPosition.Name = "cbPosition";
+            this.cbPosition.Size = new System.Drawing.Size(271, 21);
+            this.cbPosition.TabIndex = 4;
             // 
-            // txtFIO
+            // tbFullName
             // 
-            this.txtFIO.Location = new System.Drawing.Point(84, 15);
-            this.txtFIO.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFIO.Name = "txtFIO";
-            this.txtFIO.Size = new System.Drawing.Size(303, 20);
-            this.txtFIO.TabIndex = 1;
+            this.tbFullName.Location = new System.Drawing.Point(84, 15);
+            this.tbFullName.Margin = new System.Windows.Forms.Padding(4);
+            this.tbFullName.Name = "tbFullName";
+            this.tbFullName.Size = new System.Drawing.Size(303, 20);
+            this.tbFullName.TabIndex = 1;
             // 
             // lblPosition
             // 
@@ -112,13 +113,13 @@
             this.lblPosition.TabIndex = 8;
             this.lblPosition.Text = "Должность:";
             // 
-            // txtEmail
+            // tbEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(84, 84);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(303, 20);
-            this.txtEmail.TabIndex = 3;
+            this.tbEmail.Location = new System.Drawing.Point(84, 84);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(303, 20);
+            this.tbEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -140,13 +141,13 @@
             this.lblTel.TabIndex = 4;
             this.lblTel.Text = "Телефон:";
             // 
-            // txtTel
+            // tbTelephone
             // 
-            this.txtTel.Location = new System.Drawing.Point(84, 49);
-            this.txtTel.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(303, 20);
-            this.txtTel.TabIndex = 2;
+            this.tbTelephone.Location = new System.Drawing.Point(84, 49);
+            this.tbTelephone.Margin = new System.Windows.Forms.Padding(4);
+            this.tbTelephone.Name = "tbTelephone";
+            this.tbTelephone.Size = new System.Drawing.Size(303, 20);
+            this.tbTelephone.TabIndex = 2;
             // 
             // btCancel
             // 
@@ -159,6 +160,7 @@
             this.btCancel.Text = "Отменить";
             this.btCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btSave
             // 
@@ -168,9 +170,10 @@
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(109, 48);
             this.btSave.TabIndex = 8;
-            this.btSave.Text = "Сохранить";
+            this.btSave.Text = "Сохранить и закрыть";
             this.btSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // NewContactPeople
             // 
@@ -194,13 +197,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button addTypeButton;
         private System.Windows.Forms.Label lblFIO;
-        private System.Windows.Forms.ComboBox cmbPosition;
-        private System.Windows.Forms.TextBox txtFIO;
+        private System.Windows.Forms.ComboBox cbPosition;
+        private System.Windows.Forms.TextBox tbFullName;
         private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblTel;
-        private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.TextBox tbTelephone;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Button btSave;
     }

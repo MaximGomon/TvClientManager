@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using GlobalEntity;
 
 namespace ConnectService
 {
@@ -13,11 +14,17 @@ namespace ConnectService
     public interface ITvManagerClientService
     {
 
+        [OperationContract]
+        bool ClientLogin(string login, string password);
+
+        [OperationContract]
+        List<TvClients> LoadClients();
+
         //[OperationContract]
         //string GetData(int value);
 
-        [OperationContract]
-        string GetServerData(int value);
+        //[OperationContract]
+        //string GetServerData(int value);
 
         // TODO: Add your service operations here
     }

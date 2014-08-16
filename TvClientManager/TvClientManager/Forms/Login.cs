@@ -16,5 +16,38 @@ namespace TvClientManager.Forms
         {
             InitializeComponent();
         }
+
+        public string UserLogin
+        {
+            get
+            {
+                return tbUserLogin.Text.Trim();
+            }
+        }
+
+        private void tbLogin_Click(object sender, EventArgs e)
+        {
+            var clientService = ServiceManager.ServiceInstance;
+            if (clientService.ClientLogin(UserLogin, tbUserPassword.Text.Trim()))
+            {
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                this.DialogResult = DialogResult.Abort;
+            }
+
+            clientService.Close();
+
+            this.Close();
+            //if(clientService.)
+            
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Abort;
+            this.Close();
+        }
     }
 }
