@@ -45,12 +45,6 @@ namespace DatabaseWorker
 
             TakeCount = int.MaxValue;
             TypeName = type.FullName;
-
-            //var isIDeletable = typeof (IDeletable).IsAssignableFrom(type);
-            //if (isIDeletable)
-            //{
-            //    AddCriteria(PropertyNameIsDeleted, bool.FalseString);
-            //}
         }
 
 

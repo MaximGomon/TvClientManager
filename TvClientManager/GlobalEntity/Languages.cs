@@ -17,6 +17,7 @@ namespace GlobalEntity
         public Languages()
         {
             this.IsDelete = 0;
+            this.Clients = new HashSet<TvClients>();
         }
     
         public System.Guid Id { get; set; }
@@ -26,7 +27,7 @@ namespace GlobalEntity
         public string Title { get; set; }
         public int Code { get; set; }
     
-        public virtual TvClients Clients { get; set; }
+        public virtual ICollection<TvClients> Clients { get; set; }
         public virtual Chanels Chanels { get; set; }
     }
 }

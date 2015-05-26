@@ -1,199 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TvManagerModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityContainer Name="TvManagerModelStoreContainer">
-    <EntitySet Name="TvClientsSet" EntityType="TvManagerModel.Store.TvClientsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ChanelsSet" EntityType="TvManagerModel.Store.ChanelsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ExecutorsSet" EntityType="TvManagerModel.Store.ExecutorsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="UserInfoSet" EntityType="TvManagerModel.Store.UserInfoSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TemplatesSet" EntityType="TvManagerModel.Store.TemplatesSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TemplateParamsSet" EntityType="TvManagerModel.Store.TemplateParamsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ClientChanelsSet" EntityType="TvManagerModel.Store.ClientChanelsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ClientStateSet" EntityType="TvManagerModel.Store.ClientStateSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ChanelStateSet" EntityType="TvManagerModel.Store.ChanelStateSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LanguagesSet" EntityType="TvManagerModel.Store.LanguagesSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CurrenciesSet" EntityType="TvManagerModel.Store.CurrenciesSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="ContactPeopleSet" EntityType="TvManagerModel.Store.ContactPeopleSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PaymentsSet" EntityType="TvManagerModel.Store.PaymentsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="BanksInfoSet" EntityType="TvManagerModel.Store.BanksInfoSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PositionsSet" EntityType="TvManagerModel.Store.PositionsSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="TemplateParamsTypeSet" EntityType="TvManagerModel.Store.TemplateParamsTypeSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="FilesSet" EntityType="TvManagerModel.Store.FilesSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="FIleErrorSet" EntityType="TvManagerModel.Store.FIleErrorSet" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="ClientsClientState" Association="TvManagerModel.Store.ClientsClientState">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="ClientState" EntitySet="ClientStateSet" />
-    </AssociationSet>
-    <AssociationSet Name="ChanelStateChanels" Association="TvManagerModel.Store.ChanelStateChanels">
-      <End Role="ChanelState" EntitySet="ChanelStateSet" />
-      <End Role="Chanels" EntitySet="ChanelsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientChanelsChanels" Association="TvManagerModel.Store.ClientChanelsChanels">
-      <End Role="ClientChanels" EntitySet="ClientChanelsSet" />
-      <End Role="Chanels" EntitySet="ChanelsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientChanelsClients" Association="TvManagerModel.Store.ClientChanelsClients">
-      <End Role="ClientChanels" EntitySet="ClientChanelsSet" />
-      <End Role="Clients" EntitySet="TvClientsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientsPayments" Association="TvManagerModel.Store.ClientsPayments">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="Payments" EntitySet="PaymentsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientsExecutors" Association="TvManagerModel.Store.ClientsExecutors">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="Executors" EntitySet="ExecutorsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientsContactPeople" Association="TvManagerModel.Store.ClientsContactPeople">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="ContactPeople" EntitySet="ContactPeopleSet" />
-    </AssociationSet>
-    <AssociationSet Name="PositionsContactPeople" Association="TvManagerModel.Store.PositionsContactPeople">
-      <End Role="Positions" EntitySet="PositionsSet" />
-      <End Role="ContactPeople" EntitySet="ContactPeopleSet" />
-    </AssociationSet>
-    <AssociationSet Name="BanksInfoClients" Association="TvManagerModel.Store.BanksInfoClients">
-      <End Role="BanksInfo" EntitySet="BanksInfoSet" />
-      <End Role="Clients" EntitySet="TvClientsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientsLanguages" Association="TvManagerModel.Store.ClientsLanguages">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="Languages" EntitySet="LanguagesSet" />
-    </AssociationSet>
-    <AssociationSet Name="ChanelsLanguages" Association="TvManagerModel.Store.ChanelsLanguages">
-      <End Role="Chanels" EntitySet="ChanelsSet" />
-      <End Role="Languages" EntitySet="LanguagesSet" />
-    </AssociationSet>
-    <AssociationSet Name="CurrenciesClients" Association="TvManagerModel.Store.CurrenciesClients">
-      <End Role="Currencies" EntitySet="CurrenciesSet" />
-      <End Role="Clients" EntitySet="TvClientsSet" />
-    </AssociationSet>
-    <AssociationSet Name="CurrenciesPayments" Association="TvManagerModel.Store.CurrenciesPayments">
-      <End Role="Currencies" EntitySet="CurrenciesSet" />
-      <End Role="Payments" EntitySet="PaymentsSet" />
-    </AssociationSet>
-    <AssociationSet Name="TemplateParamsTypeTemplates" Association="TvManagerModel.Store.TemplateParamsTypeTemplates">
-      <End Role="TemplateParamsType" EntitySet="TemplateParamsTypeSet" />
-      <End Role="Templates" EntitySet="TemplatesSet" />
-    </AssociationSet>
-    <AssociationSet Name="TemplateParamsTypeTemplateParams" Association="TvManagerModel.Store.TemplateParamsTypeTemplateParams">
-      <End Role="TemplateParamsType" EntitySet="TemplateParamsTypeSet" />
-      <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
-    </AssociationSet>
-    <AssociationSet Name="TemplatesTemplateParams" Association="TvManagerModel.Store.TemplatesTemplateParams">
-      <End Role="Templates" EntitySet="TemplatesSet" />
-      <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientsTemplateParams" Association="TvManagerModel.Store.ClientsTemplateParams">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="TemplateParams" EntitySet="TemplateParamsSet" />
-    </AssociationSet>
-    <AssociationSet Name="ClientsFiles" Association="TvManagerModel.Store.ClientsFiles">
-      <End Role="Clients" EntitySet="TvClientsSet" />
-      <End Role="Files" EntitySet="FilesSet" />
-    </AssociationSet>
-    <AssociationSet Name="ChanelsFiles" Association="TvManagerModel.Store.ChanelsFiles">
-      <End Role="Chanels" EntitySet="ChanelsSet" />
-      <End Role="Files" EntitySet="FilesSet" />
-    </AssociationSet>
-    <AssociationSet Name="FIleErrorFiles" Association="TvManagerModel.Store.FIleErrorFiles">
-      <End Role="FIleError" EntitySet="FIleErrorSet" />
-      <End Role="Files" EntitySet="FilesSet" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="TvClientsSet">
+<Schema Namespace="TvManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BanksInfoSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="true" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="StateId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ExecutorID" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="BankInfoId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LanguageId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="PayRate" Type="float" Nullable="false" />
-    <Property Name="CurrencyId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Telephone" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
-    <Property Name="BlockedDate" Type="datetime" Nullable="true" />
-    <Property Name="Executors_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Languages_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Currencies_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="ChanelsSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
     <Property Name="StateId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="LanguageId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="TimeOffSet" Type="int" Nullable="false" DefaultValue="0" />
+    <Property Name="TimeOffSet" Type="int" Nullable="false" />
     <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
     <Property Name="FileName" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ChanelState_Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Languages_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <EntityType Name="ExecutorsSet">
+  <EntityType Name="ChanelStateSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
-  <EntityType Name="UserInfoSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="IsAdmin" Type="tinyint" Nullable="false" DefaultValue="0" />
-  </EntityType>
-  <EntityType Name="TemplatesSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
     <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="TemplateParamType" Type="uniqueidentifier" Nullable="true" />
-  </EntityType>
-  <EntityType Name="TemplateParamsSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TemplateId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="TypeId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ClientId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Templates_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ClientChanelsSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="ChanelId" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Chanels_Id" Type="uniqueidentifier" Nullable="false" />
@@ -203,7 +51,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
@@ -211,47 +59,12 @@
     <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <EntityType Name="ChanelStateSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Code" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="LanguagesSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Code" Type="int" Nullable="false" />
-  </EntityType>
-  <EntityType Name="CurrenciesSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Code" Type="int" Nullable="false" />
-    <Property Name="IsMain" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="Cource" Type="float" Nullable="false" />
-  </EntityType>
   <EntityType Name="ContactPeopleSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="bit" />
     <Property Name="CreateDate" Type="datetime" Nullable="false" />
     <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
     <Property Name="PositionId" Type="uniqueidentifier" Nullable="false" />
@@ -261,69 +74,29 @@
     <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <EntityType Name="PaymentsSet">
+  <EntityType Name="CurrenciesSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="PayDate" Type="datetime" Nullable="false" />
-    <Property Name="Paid" Type="float" Nullable="false" />
-    <Property Name="Dept" Type="float" Nullable="false" />
-    <Property Name="CurrencyId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Currencies_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="BanksInfoSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="PositionsSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Code" Type="int" Nullable="false" />
-    <Property Name="ContactPeople_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsMain" Type="tinyint" Nullable="false" />
+    <Property Name="Cource" Type="float" Nullable="false" />
   </EntityType>
-  <EntityType Name="TemplateParamsTypeSet">
+  <EntityType Name="ExecutorsSet">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IsDelete" Type="tinyint" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
-    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Code" Type="int" Nullable="false" />
-    <Property Name="Templates_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="TemplateParams_Id" Type="uniqueidentifier" Nullable="false" />
-  </EntityType>
-  <EntityType Name="FilesSet">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="uniqueidentifier" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="ChanelId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedDate" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="FileLocation" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CreateDate" Type="datetime" Nullable="false" />
-    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
-    <Property Name="Chanels_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="FIleErrorSet">
     <Key>
@@ -335,244 +108,420 @@
     <Property Name="FileId" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Files_Id" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
-  <Association Name="ClientsClientState">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
-    <End Role="ClientState" Type="TvManagerModel.Store.ClientStateSet" Multiplicity="*" />
+  <EntityType Name="FilesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ChanelId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FileLocation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Chanels_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LanguagesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PaymentsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="PayDate" Type="datetime" Nullable="false" />
+    <Property Name="Paid" Type="float" Nullable="false" />
+    <Property Name="Dept" Type="float" Nullable="false" />
+    <Property Name="CurrencyId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Currencies_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PositionsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="ContactPeople_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TemplateParamsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TypeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClientId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Templates_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Clients_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TemplateParamsTypeSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="int" Nullable="false" />
+    <Property Name="Templates_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemplateParams_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TemplatesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TemplateParamType" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="TvClientsSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="StateId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ExecutorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BankInfoId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LanguageId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PayRate" Type="float" Nullable="false" />
+    <Property Name="CurrencyId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telephone" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Comment" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RegisterDate" Type="datetime" Nullable="false" />
+    <Property Name="BlockedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserInfoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Login" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDelete" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedDate" Type="datetime" Nullable="false" />
+    <Property Name="IsAdmin" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BanksInfoClients">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="BanksInfoSet" Type="Self.BanksInfoSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Clients">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="ClientState">
+      <Dependent Role="BanksInfoSet">
         <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ChanelStateChanels">
-    <End Role="ChanelState" Type="TvManagerModel.Store.ChanelStateSet" Multiplicity="1" />
-    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="*" />
+  <Association Name="FK_ChanelsFiles">
+    <End Role="ChanelsSet" Type="Self.ChanelsSet" Multiplicity="1" />
+    <End Role="FilesSet" Type="Self.FilesSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ChanelState">
+      <Principal Role="ChanelsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Chanels">
+      <Dependent Role="FilesSet">
+        <PropertyRef Name="Chanels_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChanelsLanguages">
+    <End Role="LanguagesSet" Type="Self.LanguagesSet" Multiplicity="1" />
+    <End Role="ChanelsSet" Type="Self.ChanelsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LanguagesSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChanelsSet">
+        <PropertyRef Name="Languages_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChanelStateChanels">
+    <End Role="ChanelStateSet" Type="Self.ChanelStateSet" Multiplicity="1" />
+    <End Role="ChanelsSet" Type="Self.ChanelsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChanelStateSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChanelsSet">
         <PropertyRef Name="ChanelState_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ClientChanelsChanels">
-    <End Role="ClientChanels" Type="TvManagerModel.Store.ClientChanelsSet" Multiplicity="*" />
-    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="1" />
+  <Association Name="FK_ClientChanelsChanels">
+    <End Role="ChanelsSet" Type="Self.ChanelsSet" Multiplicity="1" />
+    <End Role="ClientChanelsSet" Type="Self.ClientChanelsSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Chanels">
+      <Principal Role="ChanelsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="ClientChanels">
+      <Dependent Role="ClientChanelsSet">
         <PropertyRef Name="Chanels_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ClientChanelsClients">
-    <End Role="ClientChanels" Type="TvManagerModel.Store.ClientChanelsSet" Multiplicity="*" />
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
+  <Association Name="FK_ClientChanelsClients">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="ClientChanelsSet" Type="Self.ClientChanelsSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Clients">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="ClientChanels">
+      <Dependent Role="ClientChanelsSet">
         <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ClientsPayments">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
-    <End Role="Payments" Type="TvManagerModel.Store.PaymentsSet" Multiplicity="*" />
+  <Association Name="FK_ClientsClientState">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="ClientStateSet" Type="Self.ClientStateSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Clients">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Payments">
+      <Dependent Role="ClientStateSet">
         <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ClientsExecutors">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="*" />
-    <End Role="Executors" Type="TvManagerModel.Store.ExecutorsSet" Multiplicity="1" />
+  <Association Name="FK_ClientsContactPeople">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="ContactPeopleSet" Type="Self.ContactPeopleSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Executors">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Clients">
-        <PropertyRef Name="Executors_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="ClientsContactPeople">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
-    <End Role="ContactPeople" Type="TvManagerModel.Store.ContactPeopleSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Clients">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="ContactPeople">
+      <Dependent Role="ContactPeopleSet">
         <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="PositionsContactPeople">
-    <End Role="Positions" Type="TvManagerModel.Store.PositionsSet" Multiplicity="*" />
-    <End Role="ContactPeople" Type="TvManagerModel.Store.ContactPeopleSet" Multiplicity="1" />
+  <Association Name="FK_ClientsFiles">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="FilesSet" Type="Self.FilesSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="ContactPeople">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Positions">
-        <PropertyRef Name="ContactPeople_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="BanksInfoClients">
-    <End Role="BanksInfo" Type="TvManagerModel.Store.BanksInfoSet" Multiplicity="*" />
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Clients">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="BanksInfo">
+      <Dependent Role="FilesSet">
         <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ClientsLanguages">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="*" />
-    <End Role="Languages" Type="TvManagerModel.Store.LanguagesSet" Multiplicity="1" />
+  <Association Name="FK_ClientsPayments">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="PaymentsSet" Type="Self.PaymentsSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Languages">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Clients">
-        <PropertyRef Name="Languages_Id" />
+      <Dependent Role="PaymentsSet">
+        <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="ChanelsLanguages">
-    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="*" />
-    <End Role="Languages" Type="TvManagerModel.Store.LanguagesSet" Multiplicity="1" />
+  <Association Name="FK_ClientsTemplateParams">
+    <End Role="TvClientsSet" Type="Self.TvClientsSet" Multiplicity="1" />
+    <End Role="TemplateParamsSet" Type="Self.TemplateParamsSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Languages">
+      <Principal Role="TvClientsSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Chanels">
-        <PropertyRef Name="Languages_Id" />
+      <Dependent Role="TemplateParamsSet">
+        <PropertyRef Name="Clients_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="CurrenciesClients">
-    <End Role="Currencies" Type="TvManagerModel.Store.CurrenciesSet" Multiplicity="1" />
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="*" />
+  <Association Name="FK_CurrenciesPayments">
+    <End Role="CurrenciesSet" Type="Self.CurrenciesSet" Multiplicity="1" />
+    <End Role="PaymentsSet" Type="Self.PaymentsSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Currencies">
+      <Principal Role="CurrenciesSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Clients">
+      <Dependent Role="PaymentsSet">
         <PropertyRef Name="Currencies_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="CurrenciesPayments">
-    <End Role="Currencies" Type="TvManagerModel.Store.CurrenciesSet" Multiplicity="1" />
-    <End Role="Payments" Type="TvManagerModel.Store.PaymentsSet" Multiplicity="*" />
+  <Association Name="FK_FIleErrorFiles">
+    <End Role="FilesSet" Type="Self.FilesSet" Multiplicity="1" />
+    <End Role="FIleErrorSet" Type="Self.FIleErrorSet" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Currencies">
+      <Principal Role="FilesSet">
         <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Payments">
-        <PropertyRef Name="Currencies_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TemplateParamsTypeTemplates">
-    <End Role="TemplateParamsType" Type="TvManagerModel.Store.TemplateParamsTypeSet" Multiplicity="*" />
-    <End Role="Templates" Type="TvManagerModel.Store.TemplatesSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Templates">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TemplateParamsType">
-        <PropertyRef Name="Templates_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TemplateParamsTypeTemplateParams">
-    <End Role="TemplateParamsType" Type="TvManagerModel.Store.TemplateParamsTypeSet" Multiplicity="*" />
-    <End Role="TemplateParams" Type="TvManagerModel.Store.TemplateParamsSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="TemplateParams">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TemplateParamsType">
-        <PropertyRef Name="TemplateParams_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="TemplatesTemplateParams">
-    <End Role="Templates" Type="TvManagerModel.Store.TemplatesSet" Multiplicity="1" />
-    <End Role="TemplateParams" Type="TvManagerModel.Store.TemplateParamsSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Templates">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TemplateParams">
-        <PropertyRef Name="Templates_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="ClientsTemplateParams">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
-    <End Role="TemplateParams" Type="TvManagerModel.Store.TemplateParamsSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Clients">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="TemplateParams">
-        <PropertyRef Name="Clients_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="ClientsFiles">
-    <End Role="Clients" Type="TvManagerModel.Store.TvClientsSet" Multiplicity="1" />
-    <End Role="Files" Type="TvManagerModel.Store.FilesSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Clients">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Files">
-        <PropertyRef Name="Clients_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="ChanelsFiles">
-    <End Role="Chanels" Type="TvManagerModel.Store.ChanelsSet" Multiplicity="1" />
-    <End Role="Files" Type="TvManagerModel.Store.FilesSet" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Chanels">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="Files">
-        <PropertyRef Name="Chanels_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FIleErrorFiles">
-    <End Role="FIleError" Type="TvManagerModel.Store.FIleErrorSet" Multiplicity="*" />
-    <End Role="Files" Type="TvManagerModel.Store.FilesSet" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="Files">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="FIleError">
+      <Dependent Role="FIleErrorSet">
         <PropertyRef Name="Files_Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_PositionsContactPeople">
+    <End Role="ContactPeopleSet" Type="Self.ContactPeopleSet" Multiplicity="1" />
+    <End Role="PositionsSet" Type="Self.PositionsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContactPeopleSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PositionsSet">
+        <PropertyRef Name="ContactPeople_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TemplateParamsTypeTemplateParams">
+    <End Role="TemplateParamsSet" Type="Self.TemplateParamsSet" Multiplicity="1" />
+    <End Role="TemplateParamsTypeSet" Type="Self.TemplateParamsTypeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TemplateParamsSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParamsTypeSet">
+        <PropertyRef Name="TemplateParams_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TemplateParamsTypeTemplates">
+    <End Role="TemplatesSet" Type="Self.TemplatesSet" Multiplicity="1" />
+    <End Role="TemplateParamsTypeSet" Type="Self.TemplateParamsTypeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TemplatesSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParamsTypeSet">
+        <PropertyRef Name="Templates_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TemplatesTemplateParams">
+    <End Role="TemplatesSet" Type="Self.TemplatesSet" Multiplicity="1" />
+    <End Role="TemplateParamsSet" Type="Self.TemplateParamsSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TemplatesSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TemplateParamsSet">
+        <PropertyRef Name="Templates_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TvManagerModelStoreContainer">
+    <EntitySet Name="BanksInfoSet" EntityType="Self.BanksInfoSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChanelsSet" EntityType="Self.ChanelsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChanelStateSet" EntityType="Self.ChanelStateSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientChanelsSet" EntityType="Self.ClientChanelsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClientStateSet" EntityType="Self.ClientStateSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactPeopleSet" EntityType="Self.ContactPeopleSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CurrenciesSet" EntityType="Self.CurrenciesSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExecutorsSet" EntityType="Self.ExecutorsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FIleErrorSet" EntityType="Self.FIleErrorSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilesSet" EntityType="Self.FilesSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LanguagesSet" EntityType="Self.LanguagesSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentsSet" EntityType="Self.PaymentsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PositionsSet" EntityType="Self.PositionsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TemplateParamsSet" EntityType="Self.TemplateParamsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TemplateParamsTypeSet" EntityType="Self.TemplateParamsTypeSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TemplatesSet" EntityType="Self.TemplatesSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TvClientsSet" EntityType="Self.TvClientsSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfoSet" EntityType="Self.UserInfoSet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BanksInfoClients" Association="Self.FK_BanksInfoClients">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="BanksInfoSet" EntitySet="BanksInfoSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChanelsFiles" Association="Self.FK_ChanelsFiles">
+      <End Role="ChanelsSet" EntitySet="ChanelsSet" />
+      <End Role="FilesSet" EntitySet="FilesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChanelsLanguages" Association="Self.FK_ChanelsLanguages">
+      <End Role="LanguagesSet" EntitySet="LanguagesSet" />
+      <End Role="ChanelsSet" EntitySet="ChanelsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChanelStateChanels" Association="Self.FK_ChanelStateChanels">
+      <End Role="ChanelStateSet" EntitySet="ChanelStateSet" />
+      <End Role="ChanelsSet" EntitySet="ChanelsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientChanelsChanels" Association="Self.FK_ClientChanelsChanels">
+      <End Role="ChanelsSet" EntitySet="ChanelsSet" />
+      <End Role="ClientChanelsSet" EntitySet="ClientChanelsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientChanelsClients" Association="Self.FK_ClientChanelsClients">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="ClientChanelsSet" EntitySet="ClientChanelsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientsClientState" Association="Self.FK_ClientsClientState">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="ClientStateSet" EntitySet="ClientStateSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientsContactPeople" Association="Self.FK_ClientsContactPeople">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="ContactPeopleSet" EntitySet="ContactPeopleSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientsFiles" Association="Self.FK_ClientsFiles">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="FilesSet" EntitySet="FilesSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientsPayments" Association="Self.FK_ClientsPayments">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="PaymentsSet" EntitySet="PaymentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientsTemplateParams" Association="Self.FK_ClientsTemplateParams">
+      <End Role="TvClientsSet" EntitySet="TvClientsSet" />
+      <End Role="TemplateParamsSet" EntitySet="TemplateParamsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CurrenciesPayments" Association="Self.FK_CurrenciesPayments">
+      <End Role="CurrenciesSet" EntitySet="CurrenciesSet" />
+      <End Role="PaymentsSet" EntitySet="PaymentsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FIleErrorFiles" Association="Self.FK_FIleErrorFiles">
+      <End Role="FilesSet" EntitySet="FilesSet" />
+      <End Role="FIleErrorSet" EntitySet="FIleErrorSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PositionsContactPeople" Association="Self.FK_PositionsContactPeople">
+      <End Role="ContactPeopleSet" EntitySet="ContactPeopleSet" />
+      <End Role="PositionsSet" EntitySet="PositionsSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TemplateParamsTypeTemplateParams" Association="Self.FK_TemplateParamsTypeTemplateParams">
+      <End Role="TemplateParamsSet" EntitySet="TemplateParamsSet" />
+      <End Role="TemplateParamsTypeSet" EntitySet="TemplateParamsTypeSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TemplateParamsTypeTemplates" Association="Self.FK_TemplateParamsTypeTemplates">
+      <End Role="TemplatesSet" EntitySet="TemplatesSet" />
+      <End Role="TemplateParamsTypeSet" EntitySet="TemplateParamsTypeSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TemplatesTemplateParams" Association="Self.FK_TemplatesTemplateParams">
+      <End Role="TemplatesSet" EntitySet="TemplatesSet" />
+      <End Role="TemplateParamsSet" EntitySet="TemplateParamsSet" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

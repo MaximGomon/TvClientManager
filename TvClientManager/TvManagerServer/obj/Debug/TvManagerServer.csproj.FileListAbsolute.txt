@@ -6,3 +6,11 @@ E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServe
 E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.exe
 E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.pdb
 E:\Work\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csprojResolveAssemblyReference.cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\bin\Debug\TvManagerServer.exe.config
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\bin\Debug\TvManagerServer.exe
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\bin\Debug\TvManagerServer.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csprojResolveAssemblyReference.cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.Properties.Resources.resources
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.csproj.GenerateResource.Cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.exe
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\TvManagerServer\obj\Debug\TvManagerServer.pdb

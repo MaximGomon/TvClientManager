@@ -4,12 +4,12 @@
     <EntitySetMapping Name="TvClientsSet">
       <EntityTypeMapping TypeName="IsTypeOf(TvManagerModel.TvClients)">
         <MappingFragment StoreEntitySet="TvClientsSet">
+          <ScalarProperty Name="ExecutorId" ColumnName="ExecutorId" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
           <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
           <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
           <ScalarProperty Name="StateId" ColumnName="StateId" />
-          <ScalarProperty Name="ExecutorID" ColumnName="ExecutorID" />
           <ScalarProperty Name="BankInfoId" ColumnName="BankInfoId" />
           <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
           <ScalarProperty Name="PayRate" ColumnName="PayRate" />
@@ -275,9 +275,6 @@
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="ClientsExecutors" TypeName="TvManagerModel.ClientsExecutors" StoreEntitySet="TvClientsSet">
-      <EndProperty Name="Executors">
-        <ScalarProperty Name="Id" ColumnName="Executors_Id" />
-      </EndProperty>
       <EndProperty Name="Clients">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
@@ -307,9 +304,6 @@
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="ClientsLanguages" TypeName="TvManagerModel.ClientsLanguages" StoreEntitySet="TvClientsSet">
-      <EndProperty Name="Languages">
-        <ScalarProperty Name="Id" ColumnName="Languages_Id" />
-      </EndProperty>
       <EndProperty Name="Clients">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
@@ -323,9 +317,6 @@
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="CurrenciesClients" TypeName="TvManagerModel.CurrenciesClients" StoreEntitySet="TvClientsSet">
-      <EndProperty Name="Currencies">
-        <ScalarProperty Name="Id" ColumnName="Currencies_Id" />
-      </EndProperty>
       <EndProperty Name="Clients">
         <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>

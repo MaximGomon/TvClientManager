@@ -105,9 +105,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="true" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="IsDelete" Type="Byte" DefaultValue="0" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="true" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="StateId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ClientState" Relationship="TvManagerModel.ClientsClientState" FromRole="Clients" ToRole="ClientState" />
     <NavigationProperty Name="ClientChanels" Relationship="TvManagerModel.ClientChanelsClients" FromRole="Clients" ToRole="ClientChanels" />
@@ -115,22 +115,23 @@
     <Property Name="ExecutorID" Type="Guid" Nullable="false" />
     <NavigationProperty Name="Executors" Relationship="TvManagerModel.ClientsExecutors" FromRole="Clients" ToRole="Executors" />
     <NavigationProperty Name="ContactPeople" Relationship="TvManagerModel.ClientsContactPeople" FromRole="Clients" ToRole="ContactPeople" />
-    <Property Name="BankInfoId" Type="String" Nullable="false" />
+    <Property Name="BankInfoId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="BanksInfo" Relationship="TvManagerModel.BanksInfoClients" FromRole="Clients" ToRole="BanksInfo" />
     <Property Name="LanguageId" Type="Guid" Nullable="false" />
     <Property Name="PayRate" Type="Double" Nullable="false" />
     <NavigationProperty Name="Languages" Relationship="TvManagerModel.ClientsLanguages" FromRole="Clients" ToRole="Languages" />
-    <Property Name="CurrencyId" Type="String" Nullable="false" />
+    <Property Name="CurrencyId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="Currencies" Relationship="TvManagerModel.CurrenciesClients" FromRole="Clients" ToRole="Currencies" />
     <NavigationProperty Name="TemplateParams" Relationship="TvManagerModel.ClientsTemplateParams" FromRole="Clients" ToRole="TemplateParams" />
-    <Property Name="Code" Type="String" Nullable="false" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="Email" Type="String" Nullable="false" />
-    <Property Name="Telephone" Type="String" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Telephone" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Files" Relationship="TvManagerModel.ClientsFiles" FromRole="Clients" ToRole="Files" />
-    <Property Name="Comment" Type="String" Nullable="false" />
-    <Property Name="RegisterDate" Type="DateTime" Nullable="false" />
-    <Property Name="BlockedDate" Type="DateTime" />
+    <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="RegisterDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BlockedDate" Type="DateTime" Precision="3" />
+    <Property Name="ExecutorId" Type="Guid" Nullable="false" />
   </EntityType>
   <EntityType Name="Chanels">
     <Key>
@@ -138,16 +139,16 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="StateId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="ChanelState" Relationship="TvManagerModel.ChanelStateChanels" FromRole="Chanels" ToRole="ChanelState" />
     <NavigationProperty Name="ClientChanels" Relationship="TvManagerModel.ClientChanelsChanels" FromRole="Chanels" ToRole="ClientChanels" />
     <Property Name="LanguageId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="Languages" Relationship="TvManagerModel.ChanelsLanguages" FromRole="Chanels" ToRole="Languages" />
     <Property Name="TimeOffSet" Type="Int32" Nullable="false" DefaultValue="0" />
-    <Property Name="Title" Type="String" Nullable="false" />
-    <Property Name="FileName" Type="String" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FileName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Files" Relationship="TvManagerModel.ChanelsFiles" FromRole="Chanels" ToRole="Files" />
   </EntityType>
   <EntityType Name="Executors">
@@ -155,24 +156,24 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IsDelete" Type="String" Nullable="false" />
-    <Property Name="CreateDate" Type="String" Nullable="false" />
-    <Property Name="ModifiedDate" Type="String" Nullable="false" />
+    <Property Name="IsDelete" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreateDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ModifiedDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsExecutors" FromRole="Executors" ToRole="Clients" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="Comment" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="UserInfo">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="Login" Type="String" Nullable="false" />
-    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="IsAdmin" Type="Byte" Nullable="false" DefaultValue="0" />
   </EntityType>
   <EntityType Name="Templates">
@@ -181,10 +182,10 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" />
-    <Property Name="Code" Type="String" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="TemplateParamType" Type="Guid" />
     <NavigationProperty Name="TemplateParamsType" Relationship="TvManagerModel.TemplateParamsTypeTemplates" FromRole="Templates" ToRole="TemplateParamsType" />
     <NavigationProperty Name="TemplateParams" Relationship="TvManagerModel.TemplatesTemplateParams" FromRole="Templates" ToRole="TemplateParams" />
@@ -197,10 +198,10 @@
     <Property Name="TemplateId" Type="Guid" Nullable="false" />
     <Property Name="TypeId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="TemplateParamsType" Relationship="TvManagerModel.TemplateParamsTypeTemplateParams" FromRole="TemplateParams" ToRole="TemplateParamsType" />
-    <Property Name="ClientId" Type="String" Nullable="false" />
+    <Property Name="ClientId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Templates" Relationship="TvManagerModel.TemplatesTemplateParams" FromRole="TemplateParams" ToRole="Templates" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsTemplateParams" FromRole="TemplateParams" ToRole="Clients" />
-    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="ClientChanels">
     <Key>
@@ -217,11 +218,11 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IsDelete" Type="String" Nullable="false" />
-    <Property Name="CreateDate" Type="String" Nullable="false" />
-    <Property Name="ModifiedDate" Type="String" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" />
-    <Property Name="Code" Type="String" Nullable="false" />
+    <Property Name="IsDelete" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreateDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ModifiedDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsClientState" FromRole="ClientState" ToRole="Clients" />
   </EntityType>
   <EntityType Name="ChanelState">
@@ -230,9 +231,9 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Code" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ChanelStateChanels" FromRole="ChanelState" ToRole="Chanels" />
   </EntityType>
@@ -242,9 +243,9 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Code" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsLanguages" FromRole="Languages" ToRole="Clients" />
     <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ChanelsLanguages" FromRole="Languages" ToRole="Chanels" />
@@ -254,10 +255,10 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IsDelete" Type="String" Nullable="false" />
-    <Property Name="CreateDate" Type="String" Nullable="false" />
-    <Property Name="ModifiedDate" Type="String" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="IsDelete" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreateDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ModifiedDate" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Code" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.CurrenciesClients" FromRole="Currencies" ToRole="Clients" />
     <Property Name="IsMain" Type="Byte" Nullable="false" DefaultValue="0" />
@@ -269,16 +270,16 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="IsDelete" Type="Byte" DefaultValue="0" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="PositionId" Type="Guid" Nullable="false" />
     <Property Name="ClientId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsContactPeople" FromRole="ContactPeople" ToRole="Clients" />
     <NavigationProperty Name="Positions" Relationship="TvManagerModel.PositionsContactPeople" FromRole="ContactPeople" ToRole="Positions" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="Telephone" Type="String" Nullable="false" />
-    <Property Name="Email" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Telephone" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
   </EntityType>
   <EntityType Name="Payments">
     <Key>
@@ -287,13 +288,13 @@
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ClientId" Type="Guid" Nullable="false" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
-    <Property Name="PayDate" Type="DateTime" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PayDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsPayments" FromRole="Payments" ToRole="Clients" />
     <Property Name="Paid" Type="Double" Nullable="false" />
     <Property Name="Dept" Type="Double" Nullable="false" />
-    <Property Name="CurrencyId" Type="String" Nullable="false" />
+    <Property Name="CurrencyId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Currencies" Relationship="TvManagerModel.CurrenciesPayments" FromRole="Payments" ToRole="Currencies" />
   </EntityType>
   <EntityType Name="BanksInfo">
@@ -302,8 +303,8 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.BanksInfoClients" FromRole="BanksInfo" ToRole="Clients" />
   </EntityType>
   <EntityType Name="Positions">
@@ -312,10 +313,10 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="ContactPeople" Relationship="TvManagerModel.PositionsContactPeople" FromRole="Positions" ToRole="ContactPeople" />
-    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Code" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="ClientsClientState">
@@ -339,7 +340,7 @@
     <End Type="TvManagerModel.Payments" Role="Payments" Multiplicity="*" />
   </Association>
   <Association Name="ClientsExecutors">
-    <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="1" />
+    <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="*" />
     <End Type="TvManagerModel.Executors" Role="Executors" Multiplicity="1" />
   </Association>
   <Association Name="ClientsContactPeople">
@@ -355,7 +356,7 @@
     <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="1" />
   </Association>
   <Association Name="ClientsLanguages">
-    <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="1" />
+    <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="*" />
     <End Type="TvManagerModel.Languages" Role="Languages" Multiplicity="1" />
   </Association>
   <Association Name="ChanelsLanguages">
@@ -376,9 +377,9 @@
     </Key>
     <Property Name="Id" Type="Guid" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsDelete" Type="Byte" Nullable="false" DefaultValue="0" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" />
-    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Code" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Templates" Relationship="TvManagerModel.TemplateParamsTypeTemplates" FromRole="TemplateParamsType" ToRole="Templates" />
     <NavigationProperty Name="TemplateParams" Relationship="TvManagerModel.TemplateParamsTypeTemplateParams" FromRole="TemplateParamsType" ToRole="TemplateParams" />
@@ -408,9 +409,9 @@
     <Property Name="ChanelId" Type="Guid" Nullable="false" />
     <NavigationProperty Name="Clients" Relationship="TvManagerModel.ClientsFiles" FromRole="Files" ToRole="Clients" />
     <NavigationProperty Name="Chanels" Relationship="TvManagerModel.ChanelsFiles" FromRole="Files" ToRole="Chanels" />
-    <Property Name="Name" Type="String" Nullable="false" />
-    <Property Name="FileLocation" Type="String" Nullable="false" />
-    <Property Name="CreateDate" Type="DateTime" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FileLocation" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="FIleError" Relationship="TvManagerModel.FIleErrorFiles" FromRole="Files" ToRole="FIleError" />
   </EntityType>
   <Association Name="ClientsFiles">
@@ -426,9 +427,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ErrorDate" Type="DateTime" Nullable="false" />
-    <Property Name="Details" Type="String" Nullable="false" />
-    <Property Name="FileId" Type="String" Nullable="false" />
+    <Property Name="ErrorDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Details" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FileId" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Files" Relationship="TvManagerModel.FIleErrorFiles" FromRole="FIleError" ToRole="Files" />
   </EntityType>
   <Association Name="FIleErrorFiles">

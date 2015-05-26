@@ -7,3 +7,12 @@ E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\EntityFramework
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.csprojResolveAssemblyReference.cache
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\GlobalEntity.dll
 E:\Work\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\GlobalEntity.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\DatabaseWorker.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\EntityFramework.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\GlobalEntity.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\GlobalEntity.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\bin\Debug\EntityFramework.xml
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.csprojResolveAssemblyReference.cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\DatabaseWorker\obj\Debug\DatabaseWorker.pdb

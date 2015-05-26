@@ -13,3 +13,13 @@ E:\Work\TVClientManager\TvClientManager\ConnectService\bin\GlobalEntity.dll
 E:\Work\TVClientManager\TvClientManager\ConnectService\bin\EntityFramework.dll
 E:\Work\TVClientManager\TvClientManager\ConnectService\bin\GlobalEntity.pdb
 E:\Work\TVClientManager\TvClientManager\ConnectService\bin\EntityFramework.xml
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\ConnectService.dll.config
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\ConnectService.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\ConnectService.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\GlobalEntity.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\EntityFramework.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\GlobalEntity.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\bin\EntityFramework.xml
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\obj\Debug\ClientConnectService.csprojResolveAssemblyReference.cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\obj\Debug\ConnectService.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\ConnectService\obj\Debug\ConnectService.pdb

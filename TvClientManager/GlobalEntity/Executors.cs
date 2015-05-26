@@ -14,6 +14,11 @@ namespace GlobalEntity
     
     public partial class Executors
     {
+        public Executors()
+        {
+            this.Clients = new HashSet<TvClients>();
+        }
+    
         public System.Guid Id { get; set; }
         public string IsDelete { get; set; }
         public string CreateDate { get; set; }
@@ -21,6 +26,6 @@ namespace GlobalEntity
         public string Name { get; set; }
         public string Comment { get; set; }
     
-        public virtual TvClients Clients { get; set; }
+        public virtual ICollection<TvClients> Clients { get; set; }
     }
 }

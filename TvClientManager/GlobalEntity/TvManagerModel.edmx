@@ -873,7 +873,7 @@
           <End Type="TvManagerModel.Payments" Role="Payments" Multiplicity="*" />
         </Association>
         <Association Name="ClientsExecutors">
-          <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="*" />
           <End Type="TvManagerModel.Executors" Role="Executors" Multiplicity="1" />
         </Association>
         <Association Name="ClientsContactPeople">
@@ -889,7 +889,7 @@
           <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="1" />
         </Association>
         <Association Name="ClientsLanguages">
-          <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="1" />
+          <End Type="TvManagerModel.TvClients" Role="Clients" Multiplicity="*" />
           <End Type="TvManagerModel.Languages" Role="Languages" Multiplicity="1" />
         </Association>
         <Association Name="ChanelsLanguages">

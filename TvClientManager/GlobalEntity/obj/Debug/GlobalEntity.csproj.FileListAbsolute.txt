@@ -6,3 +6,11 @@ E:\Work\TVClientManager\TvClientManager\GlobalEntity\bin\Debug\EntityFramework.x
 E:\Work\TVClientManager\TvClientManager\GlobalEntity\obj\Debug\GlobalEntity.dll
 E:\Work\TVClientManager\TvClientManager\GlobalEntity\obj\Debug\GlobalEntity.pdb
 E:\Work\TVClientManager\TvClientManager\GlobalEntity\obj\Debug\GlobalEntity.csprojResolveAssemblyReference.cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\bin\Debug\GlobalEntity.dll.config
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\bin\Debug\GlobalEntity.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\bin\Debug\GlobalEntity.pdb
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\bin\Debug\EntityFramework.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\bin\Debug\EntityFramework.xml
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\obj\Debug\GlobalEntity.csprojResolveAssemblyReference.cache
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\obj\Debug\GlobalEntity.dll
+C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\obj\Debug\GlobalEntity.pdb

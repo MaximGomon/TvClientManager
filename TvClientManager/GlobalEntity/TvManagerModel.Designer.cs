@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Work\TVClientManager\TvClientManager\GlobalEntity\TvManagerModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\gomonm\OneDrive\TVClientManager\TvClientManager\GlobalEntity\TvManagerModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
